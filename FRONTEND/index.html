@@ -8,32 +8,37 @@
 </head>
 <body>
     <header class="encabezado">
-        <nav class="navegador">
+        <section class="enlacesLogotipo">
+            <img src="imagenes/logotipoEmpresa/DESIGNER.ES (1)-fotor-bg-remover-20231026132953.png" alt="">
+            <nav class="navegador">
             <ul class="accesos">
             <li><a href="portafolio.html">Portafolio</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#contacto">Contato</a></li>
-            <li><a href="#sobreMi">Sobre Mí</a></li>
+            <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
             </ul>
         </nav>
-        <h1 class="tituloPrincipal">Diseñador web Freelance.</h1>
+        </section>
+        
+        <h1 class="tituloPrincipal">WebbDesigners.es</h1>
         <h3 class="tituloSecundario">Cuéntame que necesitas <span class="tituloSpan">o elige uno de mis servicios prediseñados</span></h3>
         <button class="contacto">Hablame de tu proyecto</button>
     </header>
     <main>
         <div class="tituloSeccion">
-            <h2>Acerca de mi <span class="tituloSpan"></span></h2>
+            <h2>Sobre Nosotros <span class="tituloSpan"></span></h2>
         </div>
-        <section id="sobreMi">
-            <div class= "fotoSobreMi">
-                <img class="imagenSobreMi" src="./imagenes/fotoSobreMi.jpg">
+        <section id="sobreNosotros">
+            <div class= "fotosobreNosotros">
+                <img class="imagensobreNosotros" src="./imagenes/fotosobreMi.jpg">
             </div>
-            <article class="textoSobreMi">
-                <h2>Hola, me llamo ------- y me dedico al desarrollo web,</h2>
-                <p>Soy un apasionado desarrollador de aplicaciones web con una sólida formación en la creación de soluciones digitales.</p>
-                <p>Mi enfoque se centra en combinar diseño estético con funcionalidad práctica. Me encanta transformar ideas en realidad digital.</p>
-                <p> En cada proyecto, me esfuerzo por ofrecer soluciones innovadoras y resultados impactantes. Estoy aquí para ayudarte a alcanzar tus objetivos en línea y dar vida a tus visiones digitales.</p>
-                <p><span class="tituloSpan">¡Espero colaborar contigo en tu próximo proyecto! </span></p>
+            <article class="textosobreNosotros">
+                <h2>"Transforma tu Visión en Realidad Digital"</h2>
+                <p>En "webbDeveloper.es", nuestra pasión es dar vida a tus ideas y convertirlas en experiencias digitales asombrosas. ¿Tienes una visión para un sitio web excepcional o una aplicación innovadora? Nosotros somos los arquitectos digitales que te ayudarán a construirlo.</p>
+                <p>Nuestro equipo de diseñadores y desarrolladores está listo para hacer que tu proyecto destaque en el mundo en línea. Creamos páginas web y aplicaciones que no solo son visualmente impresionantes, sino también funcionales y efectivas.</p>
+                <p> En "webbDeveloper.es", no solo diseñamos y desarrollamos sitios web y aplicaciones; creamos soluciones que impulsan tu éxito. Nuestra creatividad se combina con una sólida experiencia técnica para ofrecerte resultados excepcionales.</p>
+                <p>¡No esperes más! Lleva tu visión al siguiente nivel con nosotros. Juntos, hagamos que tu proyecto cobre vida y triunfe en el mundo digital. Tu visión es nuestro desafío, y estamos listos para superarlo.</p>
+                <p>Contacta con nosotros hoy y descubre cómo podemos convertir tus sueños digitales en una realidad impresionante. El futuro digital te espera.</p>
             </article>
            
         </section>
@@ -117,7 +122,7 @@
             <article class="aMedida">
                 <img src="imagenes/servicios/diseno-concepto-plantilla-diseno-web-html.jpg">
                 <h3>Servicios de FrontEnd</h3>
-                <p>El Frontend es la parte de un sitio web que los usuarios ven y con la que interactúan. Incluye el diseño, la apariencia y la interacción de la página web, y se construye utilizando tecnologías como HTML, CSS y JavaScript.</p>
+                <p>El Frontend es la parte de un sitio web que los usuarios ven y con la que interactúan. Incluye el diseño, la apariencia y la interacción de la página web, y se construye utilizando tecnologías como HTML, CSS y JavaScript o librerias como React</p>
 
             </article>
             <article class="aMedida">            
@@ -130,7 +135,7 @@
             <article class="aMedida">
                 <img src="imagenes/servicios/sistema-html-concepto-sitios-web.jpg">
                 <h3>Servicios de FullStack</h3>
-                <p>Un desarrollador Full Stack es alguien que tiene habilidades tanto en el Frontend como en el Backend del desarrollo web. Es capaz de trabajar en todas las partes de una aplicación web, desde la interfaz de usuario visible para los usuarios (Frontend) hasta la gestión de datos y la lógica del servidor (Backend).</p>
+                <p>El servicio Full Stack ofrece al cliente la experiencia completa en desarrollo web, cubriendo tanto la creación de la interfaz de usuario (Frontend) como la gestión de datos y la lógica del servidor (Backend). Esto permite obtener aplicaciones web completas y funcionales desde un único proveedor, simplificando el proceso de desarrollo y garantizando un enfoque integral en la creación de soluciones web eficaces.</p>
             </article>
         </section>
         <section class="tecnologia">
@@ -159,13 +164,13 @@
         <section id="contacto">
             <div class="contactoImagen">
             </div>
-            <div class="contactoInputs">
-            <input type="text" name="nombre" id="" placeholder="Nombre">
-            <input type="email" name="email" id="" placeholder="E-mail">
-            <input type="tel"   name="telefono" id="" placeholder="Teléfono">
-            <textarea rows="6" cols="50" placeholder="Escribe aquí tu consulta"></textarea>
-            <button class="buttonCard">Enviar</button>
-            </div>
+            <form class="contactoInputs" action="" method="post">
+                <input type="text" name="nombre" id="" placeholder="Nombre">
+                <input type="email" name="email" id="" placeholder="E-mail">
+                <input type="tel"   name="telefono" id="" placeholder="Teléfono">
+                <textarea rows="6" cols="50" placeholder="Escribe aquí tu consulta"></textarea>
+                <button class="buttonCard">Enviar</button>
+            </form>
             
         </section>
         <div class="tituloSeccion">
@@ -181,6 +186,7 @@
         <div class="soporte1">
             <a href="faqs.html">Preguntas frecuentes</a>
             <a href="#contacto">Whatssap</a>
+            <a href="politicas.html#contactoLegis" target="_blank">Contacto</a>
         </div>
         </section>
         <section class="footerSection contenido">
@@ -188,17 +194,19 @@
             <div class="contenido1">
                     <a href="portafolio.html">Portafolio</a>
                     <a href="#servicios">Servicios</a>
-                    <a href="#contacto">Contato</a>
-                    <a href="#sobreMi">Sobre Mí</a>
+                    <a href="#sobreNosotros">Sobre Mí</a>
                     <a href="curriculum.html">Curriculo</a>
             </div>
         </section>
         <section class="footerSection legal">
             <h4>Informacion Legal</h4>
             <div class="legal1">
-                <a href="#contacto">Contrato de formalización</a>
-                <a href="faqs.html">Política de privacidad</a>
-                <a href="#contacto">Política de cookies</a>
+                <a href="politicas.html#condicionesCompra" target="_blank">Términos y Condiciones de compra</a>
+                <a href="politicas.html#privacidad"  target="_blank">Política de privacidad</a>
+                <a href="politicas.html#cookies"  target="_blank">Política de cookies</a>
+                <a href="politicas.html#intelectual" target="_blank">Propiedad Intelectual</a>
+                <a href="politicas.html#uso" target="_blank">Condiciones de Uso</a>
+                <a href="politicas.html#legal" target="_blank">Aviso Legal</a>
             </div>
         </section>
         <section class="footerSection rrss">
