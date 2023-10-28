@@ -342,6 +342,7 @@ a:hover {
     text-align: center;
     margin-bottom: 15px;
     margin-top: 30px;
+
 }
 .buttonCard:hover{
     background-color: rgba(0, 0, 0, 1);
@@ -425,6 +426,10 @@ a:hover {
     cursor: pointer;
     margin-top: 5px;
     
+}
+
+.error {
+    background-color: rgba(236, 128, 128, 0.628);
 }
 
 #portafolio {
