@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
@@ -267,22 +267,24 @@
 
         </svg>
     </a>
-    <form class="presupuestoServicios" action="" method="post">
+
+    
+    <form class="presupuestoServicios" enctype="application/x-www-form-urlencoded" >
         <button><img class="cerrarVentana" src="imagenes/iconos/icono-cerrar.png"/></button>
         <h3>Presupuesto Servicios a medida</h3>
         <section class="presupuesto1">
             <input type="text" placeholder="Nombre o Razón social" name="razonSocial" class="razonSocial">
-            <input type="text" placeholder="CIF / DNI" name="cif" class="cif">
+            <input type="text" placeholder="CIF / DNI" name="dni" class="dni">
             <input type="email" placeholder="E-mail" name="email2" class="email2">
-            <input type="tel" placeholder="Teléfono" name="telf" class="telf">
+            <input type="tel" placeholder="Teléfono" name="telefono2" class="telefono2">
         </section>
        
         <section class="presupuesto2">
-            <input type="radio" value="" name="tipoServicio" class="tipoServicio">Web Estática</input>
-            <input type="radio" value="" name="tipoServicio" class="tipoServicio">Comercio electrónico</input>
-            <input type="radio" value="" name="tipoServicio" class="tipoServicio">Aplicación empresarial</input>
-            <input type="radio" value="" name="tipoServicio" class="tipoServicio">Plataforma de reservas</input>
-            <input type="radio" value="" name="tipoServicio" class="tipoServicio">Blog</input>
+            <label for="web estatica"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo"   value="web estatica">Web Estática</label>
+            <label for="ecommerce"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio electrónico</label>
+            <label for="aplicacion"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación empresarial</label>
+            <label for="reservas"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de reservas</label>
+            <label for="blog"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</label>
             </section>
             <h4 class="titulo2">Tipo de desarrollo -- Plazos de entrega</h4>
         <section class="presupuesto8">
@@ -296,24 +298,23 @@
                 placeholder="Si tienes algun referente sobre el estilo añade aqui la dirección web, añade paleta de colores si quieres alguna en particular, tipo de fuente, etc..."></textarea>
         </section>
         <section class="presupuesto4">
-            <textarea name="funcionalidades" id="" rows="5"
-                placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc." class="funcionalidades"></textarea>
+            <textarea name="funcionalidades" class="funcionalidades" rows="5" placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc." ></textarea>
         </section>
         <h4 class="titulo5">Público objetivo -- Competencia</h4>
         <section class="presupuesto5">
-            <textarea name="publicoObjetivo" id="" rows="5"
-                placeholder="¿A quién se dirige la página web o la aplicación? Conocer el público objetivo es esencial para adaptar el diseño y la funcionalidad." class="publicoObjetivo"></textarea>
+            <textarea name="publicoObjetivo" class="publicoObjetivo" rows="5"
+                placeholder="¿A quién se dirige la página web o la aplicación? Conocer el público objetivo es esencial para adaptar el diseño y la funcionalidad." ></textarea>
         </section>
         <section class="presupuesto6">
-            <textarea class= "competencia" name="competencia" id="" rows="5"
+            <textarea class= "competencia" name="competencia" rows="5"
                 placeholder=" ¿Tiene competidores en línea? Conocer a la competencia puede proporcionar ideas y enfoques para destacar."></textarea>
         </section>
         <section class="presupuesto7">
-            <textarea name="plazosEntrega" id="" rows="5"
-                placeholder="Fecha aproximada que se necesita la entrega" class="plazosEntrega"></textarea>
+            <textarea name="fechaEntrega" id="" rows="5"
+                placeholder="Fecha aproximada que se necesita la entrega" class="fechaEntrega"></textarea>
         </section>
         <section class="botones">
-            <button class="" type="submit">Enviar</button>
+            <button class="botonEnviarPresupuesto" type="submit">Enviar</button>
             <button class="" type="reset">Reset</button>
         </section>
 
