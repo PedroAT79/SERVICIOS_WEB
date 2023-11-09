@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const presupuestoSchema = mongoose.Schema ({
-    nombre: {
+    razonSocial: {
         type: String,
         required: true
     },
@@ -9,11 +9,11 @@ const presupuestoSchema = mongoose.Schema ({
         type: String,
         required: true
     },
-    email: {
+    email2: {
         type:String,
         required: true
     },
-    telefono: {
+    telefono2: {
         type: String,
     },
     tipoDesarrollo: {
@@ -25,8 +25,7 @@ const presupuestoSchema = mongoose.Schema ({
         required: true
     },
     fechaEntrega: {
-        type: Date,
-        required: true
+        type: Date
     },
     diseño: {
         type:String
@@ -43,7 +42,6 @@ const presupuestoSchema = mongoose.Schema ({
     },
     estado: {
         type: String,
-        required: true,
         default: 'Pendiente'
     },
     numeroPresupuesto: {
