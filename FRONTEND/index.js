@@ -11,22 +11,40 @@ const cerrarVentanaPresupuesto = document.querySelector('.cerrarVentana');
 const botonPresup = document.querySelector('#botonPresupuesto');
 const btnEnviarPresup = document.querySelector('.botonEnviarPresupuesto');
 //VARIABLES DE LOS INPUTS DEL FORMULARIO DE PRESUPUESTO:
-const razonSocial = document.querySelector('.razonSocial');
-const dni = document.querySelector('.dni');
-const email2 = document.querySelector('.email2');
-const telefono2 = document.querySelector('.telefono2');
-const descripcion = document.querySelector('.descripcion');
+const razonSocial = document.querySelector('#razonSocial');
+const dni = document.querySelector('#dni');
+const email2 = document.querySelector('#email2');
+const telefono2 = document.querySelector('#telefono2');
+const descripcion = document.querySelector('#descripcion');
 const diseño = document.querySelector('.diseño');
-const funcionalidades = document.querySelector('.funcionalidades');
+const funcionalidades = document.querySelector('#funcionalidades');
 const publicoObjetivo = document.querySelector('.publicoObjetivo');
 const competencia = document.querySelector('.competencia');
 const fechaEntrega = document.querySelector('.fechaEntrega');
+const cerrarVentanaAvisoCampos = document.querySelector('#cerrarVentana');
+
+//Boton Desplegable:
+const buttonDesplegable = document.querySelector('.desplegable button');
+const ulDesplegable = document.querySelector('.accesos');
+const ilDesplegable = document.querySelectorAll('.accesos li');
+
+
+
 
 
 //ADDEVENTLISTENERS DEL FORMULARIO PRESUPUESTO:
 botonPresup.addEventListener('click', mostrarFormularioPresup);
 cerrarVentanaPresupuesto.addEventListener('click', cerrarVentana);
 btnEnviarPresup.addEventListener('click', enviarPrespuesto);
+cerrarVentanaAvisoCampos.addEventListener('click', cerrarVentanaCamposPresup)
+
+//Validacion campos vacios del formulario para presupuestos:
+razonSocial.addEventListener('blur', comprobarFormPresupuesto);
+dni.addEventListener('blur', comprobarFormPresupuesto);
+email2.addEventListener('blur', comprobarFormPresupuesto);
+telefono2.addEventListener('blur', comprobarFormPresupuesto);
+descripcion.addEventListener('blur',comprobarFormPresupuesto);
+funcionalidades.addEventListener('blur', comprobarFormPresupuesto);
 
 
 //ADDEVENTLISTENER DEL FORMULARIO DE CONTACTO:
@@ -36,7 +54,11 @@ telef.addEventListener('blur', validarInput);
 textoConsulta.addEventListener('blur', validarInput);
 email.addEventListener('input', validarInput);
 
-
+//AddEventListener del boton despleable :
+buttonDesplegable.addEventListener('click', desplegarMenu);
+ulDesplegable.addEventListener('mouseleave', cerrarMenu);
+window.addEventListener('resize', resizeWindow);
+window.addEventListener('DOMContentLoaded',mostrarMenu);
 
 //FUNCIONES:
 //FUNCIONES VALIDACION FORMULARIO DE CONTACTO:
@@ -92,11 +114,19 @@ function limpiarAlerta(referencia) {
 
 
 }
+//Funciones del formulario de presupuesto:
 
 function cerrarVentana(e) {
     e.preventDefault();
     formularioPresupuesto.reset();
     formularioPresupuesto.style.display = 'none';
+}
+
+function cerrarVentanaCamposPresup(e){
+    e.preventDefault();
+    document.getElementById('aviso').style.display = 'none';
+    document.querySelector('.botonEnviarPresupuesto').removeAttribute("disabled"); 
+
 }
 
 function mostrarFormularioPresup() {
@@ -108,15 +138,31 @@ function tipoDesarrollo(){
     let opciones = document.querySelectorAll('input[name="tipoDesarrollo"]');
     for(let opcion of opciones){
         if (opcion.checked) {
+           
             return opcion.value;
+
+        }else {
+           document.getElementById('aviso').style.display = 'grid';
+           document.querySelector('.botonEnviarPresupuesto').setAttribute("disabled", "true"); 
+
         }
         }
     
 
 }
+function comprobarFormPresupuesto(e){ 
+    let campo = document.getElementById(e.target.id);
+    if(campo.value === '') {
+        campo.classList.add('campoVacio');
+    }else {
+        campo.classList.remove('campoVacio');
+    }
+    }
+    
 
 async function enviarPrespuesto(e) {
     e.preventDefault();
+    
     try {
         let respuesta = await fetch('http://localhost:4500/webdev/presupuestos', 
         {
@@ -157,6 +203,40 @@ async function enviarPrespuesto(e) {
 
     } catch (error) {
         console.log(error)
+    }
+}
+
+//Funcion menu desplegable:
+function desplegarMenu(e){
+   e.preventDefault();
+   if(window.innerWidth<1024){
+    ulDesplegable.style.display = 'flex';
+    ilDesplegable.style.display = 'flex';
+    console.log('desde desplegar menu')
+   }
+}
+
+function cerrarMenu(){
+    if(window.innerWidth <= 1024){
+        ulDesplegable.style.display = 'none';
+        console.log('desde cerrar menu')
+    }
+
+}
+
+function resizeWindow(){
+    if(window.innerWidth <= 1024){
+        ulDesplegable.style.display = 'none';
+    } else {
+        ulDesplegable.style.display = 'flex';
+    }
+}
+
+function mostrarMenu(e){
+    e.preventDefault();
+    if(window.innerWidth <= 1024){
+        ulDesplegable.style.display = 'none';
+       console.log('hola desde mostrarMenu');
     }
 }
 

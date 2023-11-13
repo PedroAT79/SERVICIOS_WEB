@@ -12,7 +12,8 @@
     <header class="encabezado">
         <section class="enlacesLogotipo">
             <img src="imagenes/logotipoEmpresa/DESIGNER.ES (1)-fotor-bg-remover-20231026132953.png" alt="">
-            <nav class="navegador">
+            <nav class="navegador desplegable">
+                <button><img src="imagenes/iconos/menu.png" alt=""></button>
                 <ul class="accesos">
                     <li><a href="portafolio.html">Portafolio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
@@ -24,7 +25,7 @@
         </section>
 
         <h1 class="tituloPrincipal">WebbDesigners.es</h1>
-        <h3 class="tituloSecundario">Cuéntanos que necesitas o elige uno de nuestros servicios prediseñados</h3>
+        <h2 class="tituloSecundario">Construyendo Conexiones Digitales, Transformando Negocios</h2>
         <button class="contacto">Hablame de tu proyecto</button>
 
     </header>
@@ -241,6 +242,7 @@
                 <a><img src="./imagenes/rrss/facebook.png" alt="Enlace facebook"></a>
                 <a href=""><img src="./imagenes//rrss/instagram (1).png" alt="Enlace instagram"></a>
                 <a href=""><img src="./imagenes/rrss/social.png" alt="Enlace Linkedin"></a>
+                <a href=""><img src="./imagenes/rrss/icons8-twitterx-48.png" alt="Enlace Linkedin"></a>
             </div>
         </section>
         <section class="footerSection copyright">
@@ -273,22 +275,22 @@
         <button><img class="cerrarVentana" src="imagenes/iconos/icono-cerrar.png"/></button>
         <h3>Presupuesto Servicios a medida</h3>
         <section class="presupuesto1">
-            <input type="text" placeholder="Nombre o Razón social" name="razonSocial" class="razonSocial">
-            <input type="text" placeholder="CIF / DNI" name="dni" class="dni">
-            <input type="email" placeholder="E-mail" name="email2" class="email2">
-            <input type="tel" placeholder="Teléfono" name="telefono2" class="telefono2">
+            <input type="text" placeholder="Nombre o Razón social" name="razonSocial" id="razonSocial">
+            <input type="text" placeholder="CIF / DNI" name="dni" id="dni">
+            <input type="email" placeholder="E-mail" name="email2" id="email2">
+            <input type="tel" placeholder="Teléfono" name="telefono2" id="telefono2">
         </section>
        
         <section class="presupuesto2">
-            <label for="web estatica"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo"   value="web estatica">Web Estática</label>
-            <label for="ecommerce"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio electrónico</label>
-            <label for="aplicacion"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación empresarial</label>
-            <label for="reservas"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de reservas</label>
-            <label for="blog"><input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</label>
+           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo"   value="web estatica">Web Estática</input>
+           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio electrónico</input>
+           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación empresarial</input>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de reservas</input>
+           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</input>
             </section>
             <h4 class="titulo2">Tipo de desarrollo -- Plazos de entrega</h4>
         <section class="presupuesto8">
-            <textarea name="descripcion" id="" class="descripcion" rows="5" placeholder="Descripcion del proyecto"></textarea>
+            <textarea name="descripcion" id="descripcion" rows="5" placeholder="Descripcion del proyecto"></textarea>
         </section>
            
         </section>
@@ -298,7 +300,7 @@
                 placeholder="Si tienes algun referente sobre el estilo añade aqui la dirección web, añade paleta de colores si quieres alguna en particular, tipo de fuente, etc..."></textarea>
         </section>
         <section class="presupuesto4">
-            <textarea name="funcionalidades" class="funcionalidades" rows="5" placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc." ></textarea>
+            <textarea name="funcionalidades" id="funcionalidades" rows="5" placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc." ></textarea>
         </section>
         <h4 class="titulo5">Público objetivo -- Competencia</h4>
         <section class="presupuesto5">
@@ -319,6 +321,13 @@
         </section>
 
     </form>
+    <section id="aviso">
+       
+            <img class="advertencia" src="imagenes/iconos/advertencia.png" alt="" srcset="">
+            <div class="cerrar"><button id="cerrarVentana"><img class="cerrarVentana" src="imagenes/iconos/icono-cerrar.png"/></button></div>
+            <p class="textoAviso">Seleccione un tipo de desarrollo, gracias.</p>
+
+    </section>
 
     <script src="index.js"></script>
 </body>

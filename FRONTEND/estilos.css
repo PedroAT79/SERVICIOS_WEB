@@ -47,6 +47,7 @@ body {
 
 }
 
+
 .accesos {
     margin: 25px 30px;
     list-style: none;
@@ -55,6 +56,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.desplegable button {
+    display: none;
+}
+
 
 a {
     text-decoration: none;
@@ -84,13 +90,13 @@ h3>a {
 
 .botonWhatssap {
     padding: 15px 15px;
-    margin: 10px auto;
+    margin: auto;
     background-color: rgba(0, 187, 45);
     border-radius: 5px;
     position: fixed;
     bottom: 20px;
     right: 40px;
-    border-radius: 20%;
+    border-radius: 50%;
 
 }
 
@@ -277,7 +283,6 @@ h3>a {
 }
 
 .textosobreNosotros>h2 {
-    width: 75%;
     color: rgba(54, 73, 78, 1);
     margin-bottom: 8px;
 
@@ -546,6 +551,63 @@ h3>a {
 .presupuesto1>input {
     width: 21%;
 }
+#aviso {
+    display:none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: fixed;
+    top:37.5%;
+    left:37.5%;
+    width: 25%;
+    height: 25%;
+    background-color:#fff;
+    border: 5px solid rgba(54, 73, 78, 0.8);
+    justify-content: end;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+
+.textoAviso{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    color:black;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    font-size: larger;
+}
+.advertencia{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 64px;
+    height: 64px;
+    margin:25px;
+}
+
+.cerrar {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    grid-column: 2/3;
+    grid-row: 1;
+    margin: 10px;
+    
+}
+.cerrar>button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+.cerrar>button>img {
+    width: 16px;
+    height: auto;
+}
+
+.campoVacio {
+    background-color: rgba(219, 22, 47, 0.2);
+}
 
 .presupuestoServicios>h4 {
     grid-column: 1/6;
@@ -570,9 +632,6 @@ h3>a {
     align-items: center;
 
 }
-
-
-
 .presupuestoServicios>section>input,
 .presupuestoServicios>section>textarea {
     padding: 10px 10px;
@@ -813,28 +872,228 @@ footer {
 }
 
 /*---RESPONSIVE--*/
-
-@media only screen and (max-width: 500px) {
-
-    body {
-        background-color: rgba(107, 120, 120, 0.184);
-    }
-
-    .tituloPrincipal {
-        color: rgba(219, 22, 47, 1);
-        font-size: 5vh;
-    }
-
-    .tituloSecundario {
-        text-align: center;
-        margin-top: 13px;
-    }
-
+@media only screen and (max-width: 1024px) {
     .enlacesLogotipo>img {
         width: 100px;
         height: 100px;
         margin: 1vh;
     }
+
+    .navegador{
+        display: none;
+    }
+    .tituloPrincipal {
+        color: rgba(219, 22, 47, 1);
+        font-size: 5vh;
+    }
+    .tituloSecundario {
+        text-align: center;
+        margin-top: 13px;
+        width: 85%;
+    }
+
+    #sobreNosotros{
+        display:flex;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagensobreNosotros {
+        width: 70%;
+        box-shadow: none;
+        margin: 10px;
+    }
+
+    .textosobreNosotros>p{
+        width: 70%;
+        margin: 10px;
+    }
+
+    .textosobreNosotros {
+        padding-top: 15px;
+    }
+
+    #servicios {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width:42%;
+        margin: 30px 10px;
+    }
+
+    .card > div > ul > li {
+
+        margin-top: 15px;
+    }
+
+    .otros{
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+
+    .aMedida{
+        width: 45%;
+        margin: 10px;
+        position: relative;
+    }
+
+  
+    .aMedida>h3 {
+        position:absolute;
+        text-align: center;
+        text-decoration: none;
+        color:white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: x-large;
+    }
+    .aMedida>p{
+        display: none;
+        
+    }
+
+    .aMedida>img{
+        margin: 10px;
+         
+    }
+
+    #contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(imagenes/formulario/pexels-alex-green-5699456.jpg);
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        
+    }
+    .presupuestoServicios {
+        width: 95%;
+        height: 100vh;
+        left: 1px;
+      }
+      footer{
+        grid-template-columns: repeat(3,1fr);
+        gap:3px;
+      }
+
+      .footerSection{
+        border-right: none;
+      }
+
+      .footerSection>div>a {
+        text-align: center;
+      }
+      .rrss{
+        display:block;
+        position: fixed;
+        left:1%;
+        top:45%;
+        }
+
+    .rrss1{
+        flex-direction: column;
+    }
+
+    .footerSection > div > a {
+        margin: 0px auto;
+      }
+
+      .rrss>h4{
+        display:none;
+      }
+
+
+      .contactoInputs> input, .contactoInputs > textarea {
+        width: 95%;
+      }
+      .desplegable {
+        display:block;
+        position: fixed;
+        width: 200px;
+        height: auto;
+        right: 5%;
+        top:5%;
+      }
+
+      .desplegable>button {
+        display:block;
+        position: absolute;
+        top:25%;
+        right: 20%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+
+      }
+
+      .desplegable>button>img {
+        width: 100%;
+        height: auto;
+
+      }
+
+      .accesos {
+        display: flex;
+        background-color:rgba(219, 22, 47, 0.95);
+        width: 100%;
+        position: absolute;
+        right: 14%;
+        margin: 18% 10%;
+        border:1px solid black;
+        
+
+      }
+
+      .accesos>li{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        border-bottom: 1px solid rgba(54, 73, 78, 1);
+        height: 5vh;
+        
+        
+    
+      }
+
+      .desplegable>ul>li>a {
+        margin: 15px auto;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+  
+      }
+
+      .desplegable>ul>li:hover{
+        background-color: rgba(54, 73, 78, 1);
+      }
+
+      .desplegable>ul>li>a:hover {
+        color:white;
+      }
+
+
+}
+@media only screen and (max-width: 550px) {
+
+    body {
+        background-color: rgba(107, 120, 120, 0.184);
+    }
+
+
+
 
     #sobreNosotros {
         grid-template-columns: repeat(2, 2fr);
@@ -879,17 +1138,22 @@ footer {
     }
 
     .aMedida {
-        width: 100%;
-        margin: 0;
-    }
+        width: 90%;
+        margin: auto;
+      }
 
+    .aMedida>img{
+        margin: 10px;
+          
+    }
     #servicios {
         flex-direction: column;
         align-self: center;
+        align-items: center;
     }
 
     .card {
-        width: 95%;
+        width: 85%;
         margin: 10px 10px;
         box-shadow: none;
     }
@@ -982,3 +1246,4 @@ footer {
         left: 7px;
     }
 }
+
