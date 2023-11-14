@@ -26,10 +26,10 @@ const cerrarVentanaAvisoCampos = document.querySelector('#cerrarVentana');
 //Boton Desplegable:
 const buttonDesplegable = document.querySelector('.desplegable button');
 const ulDesplegable = document.querySelector('.accesos');
-const ilDesplegable = document.querySelectorAll('.accesos li');
-
-
-
+//Inputs para acceso usuario/password:
+const accesoUsuario = document.querySelector('.accesoUsuario');
+const cerrarAccesoUsuario = document.querySelector('.usuarioContrasena button');
+const resetAccesoUsuario = document.querySelector('.resetButton');
 
 
 //ADDEVENTLISTENERS DEL FORMULARIO PRESUPUESTO:
@@ -59,6 +59,11 @@ buttonDesplegable.addEventListener('click', desplegarMenu);
 ulDesplegable.addEventListener('mouseleave', cerrarMenu);
 window.addEventListener('resize', resizeWindow);
 window.addEventListener('DOMContentLoaded',mostrarMenu);
+
+//AddEventListener para inputs de acceso a zona Admin y Usuario:
+accesoUsuario.addEventListener('click', accederZonaAdmin);
+cerrarAccesoUsuario.addEventListener('click', cerrarAccUsuario);
+resetAccesoUsuario.addEventListener('click', borrarCamposAcceso);
 
 //FUNCIONES:
 //FUNCIONES VALIDACION FORMULARIO DE CONTACTO:
@@ -211,15 +216,12 @@ function desplegarMenu(e){
    e.preventDefault();
    if(window.innerWidth<1024){
     ulDesplegable.style.display = 'flex';
-    ilDesplegable.style.display = 'flex';
-    console.log('desde desplegar menu')
    }
 }
 
 function cerrarMenu(){
     if(window.innerWidth <= 1024){
         ulDesplegable.style.display = 'none';
-        console.log('desde cerrar menu')
     }
 
 }
@@ -239,4 +241,35 @@ function mostrarMenu(e){
        console.log('hola desde mostrarMenu');
     }
 }
+
+function accederZonaAdmin(e){
+    e.preventDefault();
+    const usuarioContrasena = document.querySelector('.usuarioContrasena');
+    if (usuarioContrasena.style.display === 'none'){
+        usuarioContrasena.style.display = 'flex';
+    } else {
+        usuarioContrasena.style.display = 'none';
+    }
+   
+
+    console.log('hola desde accederZonaAdmin')
+    } 
+
+function cerrarAccUsuario(e){
+    e.preventDefault();
+    const usuarioContrasena = document.querySelector('.usuarioContrasena');
+    usuarioContrasena.style.display = 'none';
+    borrarCamposAcceso();
+}
+
+function borrarCamposAcceso(e){
+    document.querySelector('.usuario').value = '';
+    document.querySelector('.password').value = '';
+}
+
+
+
+    
+    
+
 
