@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="../FRONTEND/src/styles/estilos.css">
     <title>Servicios de Diseño y Creacion de Paginas y Aplicaciones Web</title>
 </head>
 
@@ -17,16 +17,28 @@
                 <ul class="accesos">
                     <li><a href="portafolio.html">Portafolio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contato</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                     <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
-                    <li><a href="#sobreNosotros">Acceso usuario</a></li>
+                    <li><a class="accesoUsuario">Acceso usuario</a></li>
                 </ul>
+
             </nav>
         </section>
 
         <h1 class="tituloPrincipal">WebbDesigners.es</h1>
         <h2 class="tituloSecundario">Construyendo Conexiones Digitales, Transformando Negocios</h2>
         <button class="contacto">Hablame de tu proyecto</button>
+        <ul class="usuarioContrasena">
+            <button><img src="/FRONTEND/imagenes/iconos/icono-cerrar.png" alt=""></button>
+            <li>
+                <h4>Acceso de usuario:</h4>
+            </li>
+            <li><input type="text" name="" class="usuario" placeholder="Usuario"></li>
+            <li><input type="text" name="" class="password" placeholder="Password"></li>
+            <li><button class="accessButton">Acceder</button><button class="resetButton" type="reset">Reset</button></li>
+         
+            
+        </ul>
 
     </header>
     <main>
@@ -35,7 +47,7 @@
         </div>
         <section id="sobreNosotros">
             <div class="fotosobreNosotros">
-                <img class="imagensobreNosotros" src="./imagenes/fotosobreMi.jpg">
+                <img class="imagensobreNosotros" src="../FRONTEND/imagenes/fotoSobreMi.jpg">
             </div>
             <article class="textosobreNosotros">
                 <h2>"Transforma tu Visión en Realidad Digital"</h2>
@@ -58,15 +70,18 @@
         </section>
         <div class="tituloSeccion">
             <h2>Servicios ofrecidos & <span class="tituloSpan"> Planes predefinidos.</span></h2>
-            <h3>Servicio Wordpress:</h3>
+            
         </div>
         <section id="servicios">
             <div class="card">
                 <div class="tituloCard basico">
-                    <h2>Plan Básico</h2>
+                     <img src="imagenes/tecnologias/wordpress.png" alt="">
+                     <h2>Plan Básico</h2>
+                   
                 </div>
                 <div>
                     <ul>
+                        <li>Wordpress.org</li>
                         <li>Desarrollo personalizado tipo Landing Page.</li>
                         <li>Registro de domínio gratuito y alojamiento básico</li>
                         <li>Integración con redes sociales</li>
@@ -84,10 +99,12 @@
             </div>
             <div class="card">
                 <div class="tituloCard estandar">
+                    <img src="imagenes/tecnologias/wordpress.png" alt="">
                     <h2>Plan Estándar</h2>
                 </div>
                 <div>
                     <ul>
+                        <li>Wordpress.org</li>
                         <li>Sitio web con hasta 3 paginas.</li>
                         <li>Registro de domínio gratuito y alojamiento con mayor capacidad.</li>
                         <li>De 3 a 4 secciones en pagina principal y hasta 2 en el resto.</li>
@@ -106,10 +123,13 @@
             </div>
             <div class="card">
                 <div class="tituloCard premium">
-                    <h2>Plan Premium</h2>
+                    <img src="imagenes/tecnologias/wordpress.png" alt="">
+                        <h2>Plan Premium</h2>
+                   
                 </div>
                 <div>
                     <ul>
+                        <li>Wordpress.org</li>
                         <li>Sitio web con hasta de 7 paginas</li>
                         <li>Registro de domínio gratuito y alojamiento premium.</li>
                         <li>De 3 a 4 secciones por pagina.</li>
@@ -270,9 +290,9 @@
         </svg>
     </a>
 
-    
-    <form class="presupuestoServicios" enctype="application/x-www-form-urlencoded" >
-        <button><img class="cerrarVentana" src="imagenes/iconos/icono-cerrar.png"/></button>
+
+    <form class="presupuestoServicios" enctype="application/x-www-form-urlencoded">
+        <button><img class="cerrarVentana" src="imagenes/iconos/icono-cerrar.png" /></button>
         <h3>Presupuesto Servicios a medida</h3>
         <section class="presupuesto1">
             <input type="text" placeholder="Nombre o Razón social" name="razonSocial" id="razonSocial">
@@ -280,19 +300,22 @@
             <input type="email" placeholder="E-mail" name="email2" id="email2">
             <input type="tel" placeholder="Teléfono" name="telefono2" id="telefono2">
         </section>
-       
+
         <section class="presupuesto2">
-           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo"   value="web estatica">Web Estática</input>
-           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio electrónico</input>
-           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación empresarial</input>
-            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de reservas</input>
-           <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</input>
-            </section>
-            <h4 class="titulo2">Tipo de desarrollo -- Plazos de entrega</h4>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="web estatica">Web Estática</input>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio
+            electrónico</input>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación
+            empresarial</input>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de
+            reservas</input>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</input>
+        </section>
+        <h4 class="titulo2">Tipo de desarrollo -- Plazos de entrega</h4>
         <section class="presupuesto8">
             <textarea name="descripcion" id="descripcion" rows="5" placeholder="Descripcion del proyecto"></textarea>
         </section>
-           
+
         </section>
         <h4 class="titulo3">Diseño y estilo, referencias -- Funcionalidades requeridas </h4>
         <section class="presupuesto3">
@@ -300,20 +323,21 @@
                 placeholder="Si tienes algun referente sobre el estilo añade aqui la dirección web, añade paleta de colores si quieres alguna en particular, tipo de fuente, etc..."></textarea>
         </section>
         <section class="presupuesto4">
-            <textarea name="funcionalidades" id="funcionalidades" rows="5" placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc." ></textarea>
+            <textarea name="funcionalidades" id="funcionalidades" rows="5"
+                placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc."></textarea>
         </section>
         <h4 class="titulo5">Público objetivo -- Competencia</h4>
         <section class="presupuesto5">
             <textarea name="publicoObjetivo" class="publicoObjetivo" rows="5"
-                placeholder="¿A quién se dirige la página web o la aplicación? Conocer el público objetivo es esencial para adaptar el diseño y la funcionalidad." ></textarea>
+                placeholder="¿A quién se dirige la página web o la aplicación? Conocer el público objetivo es esencial para adaptar el diseño y la funcionalidad."></textarea>
         </section>
         <section class="presupuesto6">
-            <textarea class= "competencia" name="competencia" rows="5"
+            <textarea class="competencia" name="competencia" rows="5"
                 placeholder=" ¿Tiene competidores en línea? Conocer a la competencia puede proporcionar ideas y enfoques para destacar."></textarea>
         </section>
         <section class="presupuesto7">
-            <textarea name="fechaEntrega" id="" rows="5"
-                placeholder="Fecha aproximada que se necesita la entrega" class="fechaEntrega"></textarea>
+            <textarea name="fechaEntrega" id="" rows="5" placeholder="Fecha aproximada que se necesita la entrega"
+                class="fechaEntrega"></textarea>
         </section>
         <section class="botones">
             <button class="botonEnviarPresupuesto" type="submit">Enviar</button>
@@ -322,10 +346,11 @@
 
     </form>
     <section id="aviso">
-       
-            <img class="advertencia" src="imagenes/iconos/advertencia.png" alt="" srcset="">
-            <div class="cerrar"><button id="cerrarVentana"><img class="cerrarVentana" src="imagenes/iconos/icono-cerrar.png"/></button></div>
-            <p class="textoAviso">Seleccione un tipo de desarrollo, gracias.</p>
+
+        <img class="advertencia" src="/FRONTEND/imagenes/iconos/advertencia.png" alt="" srcset="">
+        <div class="cerrar"><button id="cerrarVentana"><img class="cerrarVentana"
+                    src="/FRONTEND/imagenes/iconos/icono-cerrar.png" /></button></div>
+        <p class="textoAviso">Seleccione un tipo de desarrollo, gracias.</p>
 
     </section>
 
