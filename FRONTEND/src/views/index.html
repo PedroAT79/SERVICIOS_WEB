@@ -19,7 +19,10 @@
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
-                    <li><a class="accesoUsuario">Acceso usuario</a></li>
+                    <li><a href="" class="carrito"><img src="../imagenes/iconos/carrito-de-compras (1).png" alt=""></a>
+                    </li>
+                    <li><a class="accesoUsuario">Acceso/Registro</a></li>
+
                 </ul>
 
             </nav>
@@ -28,17 +31,37 @@
         <h1 class="tituloPrincipal">WebbDesigners.es</h1>
         <h2 class="tituloSecundario">Construyendo Conexiones Digitales, Transformando Negocios</h2>
         <button class="contacto">Hablame de tu proyecto</button>
-        <ul class="usuarioContrasena">
-            <button><img src="../imagenes/iconos/icono-cerrar.png" alt=""></button>
-            <li>
-                <h4>Acceso de usuario:</h4>
-            </li>
-            <li><input type="text" name="" class="usuario" placeholder="Usuario"></li>
-            <li><input type="text" name="" class="password" placeholder="Password"></li>
-            <li><button class="accessButton">Acceder</button><button class="resetButton" type="reset">Reset</button></li>
-         
-            
-        </ul>
+        <section class="usuarioContrasena usuarioRegistrado">
+            <ul>
+                <button><img src="../imagenes/iconos/icono-cerrar.png" alt=""></button>
+                <li>
+                    <h4>Acceso de usuario:</h4>
+                </li>
+                <li><input type="text" name="" class="usuario" placeholder="Usuario"></li>
+                <li><input type="text" name="" class="password" placeholder="Password"></li>
+                <li><button class="accessButton">Acceder</button>
+                    <button class="resetButton" type="reset">Reset</button>
+                </li>
+                <li><button class="altaUsuario">Alta Usuario</button></li>
+            </ul>
+        </section>
+        <section class="usuarioContrasena usuarioSinRegistrar">
+            <ul>
+                <button><img src="../imagenes/iconos/volver.png" alt=""></button>
+                <h4>Registro usuario nuevo:</h4>
+                
+                <li><input type="text" name="" class="nombreRegsitro" placeholder="Nombre"></li>
+                <li><input type="text" name="" class="password" placeholder="Apellido"></li>
+                <li><input type="email" name="" class="password" placeholder="Email"></li>
+                <li><input type="text" name="" class="password" placeholder="Razon Social"></li>
+                <li><input type="tel" name="" class="password" placeholder="Teléfono"></li>
+                
+                    <li><input type="text" name="" class="usuario" placeholder="Usuario"></li>
+                <li><input type="text" name="" class="password" placeholder="Password"></li><li><button class="registrarUsuario">Registrar</button></li>
+                
+            </ul>
+        </section>
+
 
     </header>
     <main>
@@ -70,14 +93,14 @@
         </section>
         <div class="tituloSeccion">
             <h2>Servicios ofrecidos & <span class="tituloSpan"> Planes predefinidos.</span></h2>
-            
+
         </div>
         <section id="servicios">
             <div class="card">
                 <div class="tituloCard basico">
-                     <img src="../imagenes/tecnologias/wordpress.png" alt="">
-                     <h2>Plan Básico</h2>
-                   
+                    <img src="../imagenes/tecnologias/wordpress.png" alt="">
+                    <h2>Plan Básico</h2>
+
                 </div>
                 <div>
                     <ul>
@@ -124,8 +147,8 @@
             <div class="card">
                 <div class="tituloCard premium">
                     <img src="../imagenes/tecnologias/wordpress.png" alt="">
-                        <h2>Plan Premium</h2>
-                   
+                    <h2>Plan Premium</h2>
+
                 </div>
                 <div>
                     <ul>

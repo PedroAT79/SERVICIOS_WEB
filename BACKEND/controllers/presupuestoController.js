@@ -14,4 +14,9 @@ try {
 
 }
 
-export {registrarPresupuesto};
+const listarPresupuestos = async (req, res) => {
+    const obtenerPresupuestos = await Presupuesto.find();
+    res.json({obtenerPresupuestos});
+}
+
+export {registrarPresupuesto, listarPresupuestos};

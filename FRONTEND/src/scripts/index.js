@@ -28,9 +28,10 @@ const buttonDesplegable = document.querySelector('.desplegable button');
 const ulDesplegable = document.querySelector('.accesos');
 //Inputs para acceso usuario/password:
 const accesoUsuario = document.querySelector('.accesoUsuario');
-const cerrarAccesoUsuario = document.querySelector('.usuarioContrasena button');
+const cerrarAccesoUsuario = document.querySelector('.usuarioContrasena ul button');
 const resetAccesoUsuario = document.querySelector('.resetButton');
-
+const btnAltaUsuario = document.querySelector('.altaUsuario');
+const btnVolverRegistroUsuario = document.querySelector('.usuarioSinRegistrar ul button');
 
 //ADDEVENTLISTENERS DEL FORMULARIO PRESUPUESTO:
 botonPresup.addEventListener('click', mostrarFormularioPresup);
@@ -64,6 +65,8 @@ window.addEventListener('DOMContentLoaded',mostrarMenu);
 accesoUsuario.addEventListener('click', accederZonaAdmin);
 cerrarAccesoUsuario.addEventListener('click', cerrarAccUsuario);
 resetAccesoUsuario.addEventListener('click', borrarCamposAcceso);
+btnAltaUsuario.addEventListener('click', abrirRegistroVentana);
+btnVolverRegistroUsuario.addEventListener('click', volverAaccesoUsuario);
 
 //FUNCIONES:
 //FUNCIONES VALIDACION FORMULARIO DE CONTACTO:
@@ -164,7 +167,7 @@ function comprobarFormPresupuesto(e){
     }
     }
     
-
+//Registrar Presupuesto:
 async function enviarPrespuesto(e) {
     e.preventDefault();
     
@@ -247,6 +250,7 @@ function accederZonaAdmin(e){
     const usuarioContrasena = document.querySelector('.usuarioContrasena');
     if (usuarioContrasena.style.display === 'none'){
         usuarioContrasena.style.display = 'flex';
+        document.querySelector('.usuarioSinRegistrar').style.display = 'none';
     } else {
         usuarioContrasena.style.display = 'none';
     }
@@ -267,8 +271,19 @@ function borrarCamposAcceso(e){
     document.querySelector('.password').value = '';
 }
 
+function abrirRegistroVentana(e){
+    e.preventDefault();
+    document.querySelector('.usuarioSinRegistrar').style.display = 'flex';
+    document.querySelector('.usuarioRegistrado').style.display = 'none';
 
 
+}
+
+function volverAaccesoUsuario(e){
+    e.preventDefault();
+    document.querySelector('.usuarioRegistrado').style.display = 'flex';
+    document.querySelector('.usuarioSinRegistrar').style.display = 'none';
+}
     
     
 
