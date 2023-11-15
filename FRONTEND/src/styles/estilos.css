@@ -24,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(105deg, rgba(72, 169, 166, 0.528) 30%, rgba(39, 42, 42, 0.254) 65%), url("/FRONTEND/imagenes/encabezado.jpg");
+    background: linear-gradient(105deg, rgba(72, 169, 166, 0.528) 30%, rgba(39, 42, 42, 0.254) 65%), url("../imagenes/encabezado.jpg");
     background-position: -8px -400px;
     background-size: cover;
     background-attachment: fixed;
@@ -238,77 +238,77 @@ h3>a {
 
 
 .html {
-    background: url("/FRONTEND/imagenes/tecnologias/html-5.png");
+    background: url("../imagenes/tecnologias/html-5.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .css {
-    background: url("/FRONTEND/imagenes/tecnologias/css3.png");
+    background: url("../imagenes/tecnologias/css3.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .js {
-    background: url("/FRONTEND/imagenes/tecnologias/js.png");
+    background: url("../imagenes/tecnologias/js.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .mongo {
-    background: url("/FRONTEND/imagenes/tecnologias/mongo.png");
+    background: url("../imagenes/tecnologias/mongo.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .react {
-    background: url("/FRONTEND/imagenes/tecnologias/reactjs.png");
+    background: url("../imagenes/tecnologias/reactjs.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .express {
-    background: url("/FRONTEND/imagenes/tecnologias/express.png");
+    background: url("../imagenes/tecnologias/express.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .java {
-    background: url("/FRONTEND/imagenes/tecnologias/java.png");
+    background: url("../imagenes/tecnologias/java.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .springboot {
-    background: url("/FRONTEND/imagenes/tecnologias/springboot.png");
+    background: url("../imagenes/tecnologias/springboot.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .git {
-    background: url("/FRONTEND/imagenes/tecnologias/github.png");
+    background: url("../imagenes/tecnologias/github.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .mysql {
-    background: url("/FRONTEND/imagenes/tecnologias/mysql.png");
+    background: url("../imagenes/tecnologias/mysql.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
 }
 
 .node {
-    background: url("/FRONTEND/imagenes/tecnologias/node.png");
+    background: url("../imagenes/tecnologias/node.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -316,7 +316,7 @@ h3>a {
 
 
 .wordpress {
-    background: url("/FRONTEND/imagenes/tecnologias/wordpress.png");
+    background: url("../imagenes/tecnologias/wordpress.png");
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -516,7 +516,7 @@ h3>a {
 }
 
 .contactoImagen {
-    background-image: url("/FRONTEND/imagenes/formulario/pexels-alex-green-5699456.jpg");
+    background-image: url("../imagenes/formulario/pexels-alex-green-5699456.jpg");
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -807,7 +807,7 @@ footer {
     row-gap: 20px;
     padding: 50px;
     color: white;
-    background: linear-gradient(95deg, rgba(12, 12, 12, 0.78) 30%, rgba(14, 15, 15, 0.857) 65%), url("/FRONTEND/imagenes/encabezado.jpg");
+    background: linear-gradient(95deg, rgba(12, 12, 12, 0.78) 30%, rgba(14, 15, 15, 0.857) 65%), url("../imagenes/encabezado.jpg");
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -927,6 +927,121 @@ footer {
     margin: 10px 0px 10px 50px;
 }
 
+/*--zona admin --*/
+
+.zona {
+    min-height: 0;
+    height: 12vh;
+}
+
+.zona>.enlacesLogotipo>img{
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+}
+
+.cuerpo {
+    height: 76vh;
+    display: grid;
+    grid-template-areas: 
+    "navCuerpo divCuerpo";
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 100%;
+}
+
+.navCuerpo {
+    background-color: rgba(72, 169, 166, 0.5);
+    border-right:3px solid rgba(54, 73, 78, 1);
+
+}
+
+.divCuerpo {
+    background-color:#f2f2f2;
+    width: 80vw;
+}
+
+.navCuerpo li {
+    border-bottom: 2px solid rgba(54, 73, 78, 1);;
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    padding: 10px;
+    font-size: small;
+    text-align: end;
+
+}
+
+
+.navCuerpo li:hover {
+    background-color: rgba(54, 73, 78, 0.3);
+    
+}
+.navCuerpo li a {
+    margin: 0;
+}
+.navCuerpo li a:hover{
+    color:rgba(54, 73, 78, 1.5);;
+    text-decoration: none;
+}
+
+.navCuerpo h3 {
+    margin: 15px auto;
+    text-align: center;
+    color:rgba(219, 22, 47, 1);
+    font-weight: 100;
+   
+
+}
+
+.divCuerpo>h3 {
+    margin: 15px auto;
+    text-align: center;
+    color:rgba(54, 73, 78, 1);
+
+}
+
+.divCuerpo>h4 {
+    margin: 15px auto;
+}
+#buscar{
+    margin-right: 2.5em;
+    padding: 5px ;
+}
+.campos{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*border: 1px solid black;*/
+    align-items: center;
+}
+.campos p {
+    margin: 0.1em;
+}
+
+.campos p>span{
+    color:rgba(219, 22, 47, 1);
+    font-style: italic;
+    font-weight: 100;
+    
+
+}
+.datos{
+    width: 88vw;
+    height:65vh;
+    /*border: 3px solid blue;*/
+
+}
+.datos h4 {
+    width: 100%;
+    margin: 15px;
+    text-align: center;
+    font-size: 1.2em;
+
+}
+
+
 /*---RESPONSIVE--*/
 @media only screen and (max-width: 1024px) {
     .enlacesLogotipo>img {
@@ -1021,7 +1136,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url("/FRONTEND/imagenes/formulario/pexels-alex-green-5699456.jpg");
+        background-image: url("../imagenes/formulario/pexels-alex-green-5699456.jpg");
         object-fit: cover;
         background-size: cover;
         background-position: center;
@@ -1317,116 +1432,3 @@ footer {
 }
 
 
-/*--zona admin --*/
-
-.zona {
-    min-height: 0;
-    height: 12vh;
-}
-
-.zona>.enlacesLogotipo>img{
-    width: 100px;
-    height: 100px;
-    margin: 7px;
-}
-
-.cuerpo {
-    height: 76vh;
-    display: grid;
-    grid-template-areas: 
-    "navCuerpo divCuerpo";
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 100%;
-}
-
-.navCuerpo {
-    background-color: rgba(72, 169, 166, 0.5);
-    border-right:3px solid rgba(54, 73, 78, 1);
-
-}
-
-.divCuerpo {
-    background-color:#f2f2f2;
-    width: 80vw;
-}
-
-.navCuerpo li {
-    border-bottom: 2px solid rgba(54, 73, 78, 1);;
-    width: 100%;
-    margin: auto;
-    list-style: none;
-    padding: 10px;
-    font-size: small;
-    text-align: end;
-
-}
-
-
-.navCuerpo li:hover {
-    background-color: rgba(54, 73, 78, 0.3);
-    
-}
-.navCuerpo li a {
-    margin: 0;
-}
-.navCuerpo li a:hover{
-    color:rgba(54, 73, 78, 1.5);;
-    text-decoration: none;
-}
-
-.navCuerpo h3 {
-    margin: 15px auto;
-    text-align: center;
-    color:rgba(219, 22, 47, 1);
-    font-weight: 100;
-   
-
-}
-
-.divCuerpo>h3 {
-    margin: 15px auto;
-    text-align: center;
-    color:rgba(54, 73, 78, 1);
-
-}
-
-.divCuerpo>h4 {
-    margin: 15px auto;
-}
-#buscar{
-    margin-right: 2.5em;
-    padding: 5px ;
-}
-.campos{
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /*border: 1px solid black;*/
-    align-items: center;
-}
-.campos p {
-    margin: 0.1em;
-}
-
-.campos p>span{
-    color:rgba(219, 22, 47, 1);
-    font-style: italic;
-    font-weight: 100;
-    
-
-}
-.datos{
-    width: 88vw;
-    height:65vh;
-    /*border: 3px solid blue;*/
-
-}
-.datos h4 {
-    width: 100%;
-    margin: 15px;
-    text-align: center;
-    font-size: 1.2em;
-
-}
