@@ -1062,9 +1062,11 @@ footer {
 }
 
 .tabla{
+    width: 70%;
     border:1px solid black;
     margin:35px auto;
     border-collapse: collapse;
+    
 }
 
 th{
@@ -1081,7 +1083,7 @@ td{
     text-align: center;
     border:1px solid rgba(54, 73, 78, 0.9);
     padding: 5px 7px;
-    color:rgba(219, 22, 47, 1);
+    color: blue;/*rgba(219, 22, 47, 1);*/
 }
 
 .impar{
@@ -1090,6 +1092,63 @@ td{
 .par{
     background-color: rgba(72, 169, 166, 0.3);
 }
+
+.btnEditar{
+    width: 3.5em;
+    background-color:rgba(72, 169, 166, 1) ;
+    margin: 7px;
+    padding: 5px 7px;
+    border:none;
+    color:#fff;
+}
+
+
+
+.btnBorrar{
+    width: 3.5em;
+    background-color:rgba(219, 22, 47, 1); 
+    margin: 7px;
+    padding: 5px 7px;
+    border:none;
+    color:#fff;
+}
+
+.btnVer{
+    width: 3.5em;
+    background-color:blue ;
+    margin: 7px;
+    padding: 5px 7px;
+    border:none;
+    color:#fff;
+}
+
+.btnEditar:hover, .btnVer:hover, .btnBorrar:hover {
+    background-color: black;
+}
+
+
+.celdaBtn{
+    display: flex;
+    border:none;
+
+}
+
+.datosPresupuesto{
+    background-color:rgba(72, 169, 166, 1);
+    width: 30%;
+    margin: 5% auto;
+    padding: 20px;
+}
+
+.datosPresupuesto p{
+    margin:5px;
+
+}
+
+.datosPresupuesto span{
+    color:#fff;
+}
+
 /*---RESPONSIVE--*/
 @media only screen and (max-width: 1024px) {
     .enlacesLogotipo>img {

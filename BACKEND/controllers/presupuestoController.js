@@ -19,4 +19,21 @@ const listarPresupuestos = async (req, res) => {
     res.json({obtenerPresupuestos});
 }
 
-export {registrarPresupuesto, listarPresupuestos};
+const verPresupuesto = async (req, res) => {
+    const { id } = req.params;
+    const presupuesto = await Presupuesto.findById(id);
+
+    if(!presupuesto){
+        const error = new Error(`No existe un presupuesto con ese nº de Id`);
+        return res.status(400).json({error: error.message});
+    }
+
+    try {
+       return res.json({presupuesto}); 
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+export {registrarPresupuesto, listarPresupuestos, verPresupuesto};
