@@ -1,5 +1,8 @@
 
-const urlPresupuestos = 'http://localhost:4500/webdev/presupuestos'
+const urlPresupuestos = 'http://localhost:4500/webdev/presupuestos';
+
+
+
 
 //Funciones para mostrar los datos registrados en bbdd:
 function obtenerPresupuestos(url) {
@@ -75,7 +78,7 @@ function crearTablaPresup(datosJson) {
     BtnVer.classList.add('btnVer');
     BtnVer.classList.add(j);
     celdaBtn.appendChild(BtnVer);
-    const btnEditar = document.createElement('button');
+    /*const btnEditar = document.createElement('button');
     btnEditar.innerHTML = 'Editar';
     btnEditar.classList.add('btnEditar')
     btnEditar.classList.add(j);
@@ -84,10 +87,7 @@ function crearTablaPresup(datosJson) {
     btnBorrar.innerHTML = 'Borrar';
     btnBorrar.classList.add('btnBorrar');
     btnBorrar.classList.add(j);
-    celdaBtn.appendChild(btnBorrar);
-
-
-
+    celdaBtn.appendChild(btnBorrar);*/
     table.appendChild(row);
   }
   table.classList.add('tabla');
@@ -101,9 +101,9 @@ window.addEventListener('load', obtenerPresupuestos(urlPresupuestos));
 
 window.addEventListener('DOMContentLoaded', (event) => {
   const datosContainer = document.querySelector('.datos');
-
   datosContainer.addEventListener('click', (event) => {
     const target = event.target;
+    //console.log(event.target);
     if (target.classList.contains('btnVer')) {
       event.preventDefault();
       const celda = target.parentElement;
@@ -114,19 +114,75 @@ window.addEventListener('DOMContentLoaded', (event) => {
     } else if (target.classList.contains('btnEditar')) {
       // Lógica para editar...
       event.preventDefault();
-      const celda = target.parentElement;
-      const fila = celda.parentElement;
-      const id = fila.querySelector('.id').textContent;
-      console.log('id:', id);
-    } else if (target.classList.contains('btnBorrar')) {
-      // Lógica para borrar...   event.preventDefault();
-      const celda = target.parentElement;
-      const fila = celda.parentElement;
-      const id = fila.querySelector('.id').textContent;
-      console.log('id:', id);
+      const inputs = document.querySelectorAll('.divContacto input');
+      inputs.forEach(function (input) {
+        if (input.disabled = true) {
+          input.disabled = false;
+          document.querySelector('.btnEditar').classList.add('btnPulsado');
+        }
+      }
+      )
+    } else if (target.classList.contains('btnOferta')) {
+      event.preventDefault();
+      const inputs = document.querySelectorAll('.divContacto input');
+      inputs.forEach(function (input) {
+        if (input.disabled = true) {
+          input.disabled = false;
+          document.querySelector('.btnOferta').classList.add('btnPulsado');
+          
+        }else{
+          console.log('lo que sea');
+        }
+       
 
-
+      })
+      const divBotones = document.querySelector('.divBotones');
+      console.log(divBotones);
+      const divOferta = document.createElement('div');
+      divOferta.classList.add('divOferta');
+      divBotones.insertAdjacentElement('beforebegin', divOferta);
+      const textAreaOferta = document.createElement('textarea');
+      const tituloOferta = document.createElement('h4');
+      const datosPpalOferta = document.createElement('div');
+      datosPpalOferta.classList.add('datosOferta');
+      const labelFechaOferta = document.createElement('label');
+      const inputFechaOferta = document.createElement('input');
+      const fecha = new Date();
+      const labelArchivo = document.createElement('label');
+      const inputArchivo = document.createElement('input');
+      const labelPlazos = document.createElement('label');
+      const inputPlazos = document.createElement('input');
+      const labelPrimerPago = document.createElement('label');
+      const inputPrimerPago = document.createElement('input');
+      labelPlazos.textContent = 'Nº Plazos de pago:'
+      labelPlazos.appendChild(inputPlazos);
+      labelPrimerPago.textContent = '% Importe por plazo:'
+      labelPrimerPago.appendChild(inputPrimerPago);
+      inputFechaOferta.value = tratamientoFecha2(fecha);
+      inputFechaOferta.classList.add('fechaOferta');
+      labelFechaOferta.textContent = 'Fecha Oferta:';
+      tituloOferta.textContent = 'Crear oferta:'
+      labelArchivo.textContent = 'Insertar Archivo:';
+      inputArchivo.classList.add('adjuntoOferta');
+      inputArchivo.setAttribute('type', 'file');
+      labelArchivo.appendChild(inputArchivo);
+      textAreaOferta.setAttribute('id','editor');
+      textAreaOferta.classList.add('textoOferta');
+      divOferta.appendChild(tituloOferta);
+      divOferta.appendChild(datosPpalOferta);
+      datosPpalOferta.appendChild(labelPlazos);
+      datosPpalOferta.appendChild(labelPrimerPago);
+      datosPpalOferta.appendChild(labelArchivo);
+      datosPpalOferta.appendChild(labelFechaOferta);
+      labelFechaOferta.appendChild(inputFechaOferta);
+      divOferta.appendChild(textAreaOferta);
+      ClassicEditor
+        .create( divOferta.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
     }
+
   });
 });
 
@@ -146,26 +202,69 @@ function verDatosPresupuesto(id) {
 }
 
 function crearVistaPresupuesto(datosJson) {
+
+  let i = 0;
   const tabla = document.querySelector('.tabla');
   tabla.style.display = 'none';
+
+  const divInfo = document.createElement('div');
+  divInfo.classList.add('divInfo');
+
+  const divContacto = document.createElement('div');
+  divContacto.classList.add('divContacto');
+
   const divDatos = document.createElement('div');
   divDatos.classList.add('datosPresupuesto')
+
   const datosPresupuesto = document.querySelector('.datos');
   datosPresupuesto.appendChild(divDatos);
 
   for (const key of Object.keys(datosJson.presupuesto)) {
-    //console.log(datosJson.presupuesto[key]);
     const parrafo = document.createElement('p');
     parrafo.textContent = tratamientoCabeceras(key) + ': ';
-    console.log(parrafo);
-    const span = document.createElement('span');
+    const input = document.createElement('input');
+    input.classList.add(key);
     const valor = datosJson.presupuesto[key];
-    console.log('valor.' +valor);
-    span.textContent = valor;
-    parrafo.appendChild(span);
-    divDatos.appendChild(parrafo);
+
+    input.value = valor;
+
+    input.setAttribute('disabled', 'true');
+    if (i < 6 || i === 7 || i >= 11) {
+      divContacto.appendChild(parrafo);
+      parrafo.appendChild(input);
+      divDatos.appendChild(divContacto);
+    } else {
+      divInfo.appendChild(parrafo);
+      parrafo.insertAdjacentElement('afterend', input);
+      divDatos.appendChild(divInfo);
+    }
+    i++;
   }
-  
+
+  const divBotones = document.createElement('div');
+  divBotones.classList.add('divBotones');
+  const botonEditar = document.createElement('button');
+  botonEditar.classList.add('btnEditar');
+  botonEditar.textContent = 'Editar';
+
+  const botonBorrar = document.createElement('button');
+  botonBorrar.classList.add('btnBorrar');
+  botonBorrar.textContent = 'Borrar';
+
+  const botonGuardar = document.createElement('button');
+  botonGuardar.classList.add('btnGuardar');
+  botonGuardar.textContent = 'Guardar';
+
+  const botonOferta = document.createElement('button');
+  botonOferta.classList.add('btnOferta');
+  botonOferta.textContent = 'Ofertar';
+
+  divBotones.appendChild(botonEditar);
+  divBotones.appendChild(botonGuardar);
+  divBotones.appendChild(botonOferta);
+  divBotones.appendChild(botonBorrar);
+  datosPresupuesto.appendChild(divBotones);
+
 }
 /*console.log(datosJson.presupuesto.razonSocial);
 console.log(Object.keys(datosJson.presupuesto.razonSocial));*/
@@ -181,7 +280,7 @@ function tratamientoCabeceras(key) {
       nuevaKey = 'Razón Social';
       break;
     case 'dni':
-      nuevaKey = 'DNI';
+      nuevaKey = 'Dni-Cif';
       break;
     case 'email2':
       nuevaKey = 'E-mail';
@@ -278,6 +377,8 @@ function clasesPresupuesto(i) {
   return clase;
 }
 
+
+
 function asimilableAfecha(fechaString) {
   const esfecha = Date.parse(fechaString);
   if (isNaN(esfecha)) {
@@ -299,14 +400,26 @@ function tratamientoFecha(fechaAFormatear) {
   const dia = fecha.getDate();
   const mes = fecha.getMonth() + 1;
   const anio = fecha.getFullYear();
-
   const fechaFormateada = `${dia < 10 ? '0' + dia : dia}/${mes < 10 ? '0' + mes : mes}/${anio % 100}`;
-
   return fechaFormateada;
 }
 
-//botones tabla presupuestos:
-// Obtener todos los botones dentro de la tabla
+function tratamientoFecha2(fechaAFormatear) {
+  const fecha = new Date(fechaAFormatear);
+  const dia = String(fecha.getDate()).padStart(2, '0');
+  const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+  const anio = String(fecha.getFullYear() % 100).padStart(2, '0');
+  const fechaFormateada = `${dia}/${mes}/${anio}`;
+  return fechaFormateada;
+}
+
+//boton Editar presupuesto:
+function editarPresupuesto(e) {
+  e.preventDefault();
+  document.querySelectorAll('input').setAttribute('disabled', false);
+}
+
+
 
 
 

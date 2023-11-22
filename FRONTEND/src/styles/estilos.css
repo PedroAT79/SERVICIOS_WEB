@@ -48,18 +48,18 @@ body {
 }
 
 .usuarioContrasena {
-    display:flex;
+    display: none;
     /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px auto;
-    background-color:rgba(72, 169, 166, 1);
+    background-color: rgba(72, 169, 166, 1);
     padding: 15px 10px;
-    
-    }
 
-.usuarioContrasena>ul{
+}
+
+.usuarioContrasena>ul {
     display: flex;
     padding: 10px 5px;
     flex-direction: column;
@@ -67,16 +67,18 @@ body {
     align-items: center;
 
 }
+
 .usuarioContrasena>ul>li {
     list-style: none;
-    margin:5px 5px;
+    margin: 5px 5px;
 }
+
 .usuarioContrasena>ul>li>input {
     padding: 7px;
     border: none;
 }
 
-.usuarioContrasena>ul>button:first-child{
+.usuarioContrasena>ul>button:first-child {
     background-color: rgba(72, 169, 166, 1);
     cursor: pointer;
     align-self: flex-end;
@@ -85,12 +87,12 @@ body {
 
 }
 
-.usuarioContrasena>ul>button:first-child:hover{
+.usuarioContrasena>ul>button:first-child:hover {
     background-color: rgba(72, 169, 166, 1);
 
 }
 
-.usuarioContrasena>ul>button>img{
+.usuarioContrasena>ul>button>img {
     width: 24px;
 
 }
@@ -98,19 +100,19 @@ body {
 
 .usuarioContrasena>ul>li>button {
     padding: 7px 15px;
-    border:none;
-    background-color:rgba(54, 73, 78, 1);
+    border: none;
+    background-color: rgba(54, 73, 78, 1);
     color: #fff;
     cursor: pointer;
     margin: 0.5px;
 }
 
 .usuarioContrasena>ul>li>button:hover {
-    background-color:black;
+    background-color: black;
     color: #fff;
-} 
+}
 
-.usuarioSinRegistrar{
+.usuarioSinRegistrar {
     display: none;
 }
 
@@ -382,10 +384,11 @@ h3>a {
     margin: 5px;
 }
 
-.tituloCard>img{
+.tituloCard>img {
     width: 24px;
     margin: 8px;
 }
+
 .intermedia {
     background-color: rgba(0, 0, 0, 1);
     height: 10vh;
@@ -590,7 +593,7 @@ h3>a {
 
 }
 
-.presupuestoServicios>button{
+.presupuestoServicios>button {
     grid-column: 6/6;
     grid-row: 1;
     margin-right: 5px;
@@ -598,10 +601,12 @@ h3>a {
     border: none;
     align-items: center;
     padding: 5px;
-    background-color: #d4d4d4;;    
+    background-color: #d4d4d4;
+    ;
 }
 
-.presupuestoServicios>button>img, .usuarioContrasena>button>img{
+.presupuestoServicios>button>img,
+.usuarioContrasena>button>img {
     width: 16px;
     height: auto;
 
@@ -614,7 +619,7 @@ h3>a {
     margin-bottom: 10px;
     text-align: center;
     font-size: 1.2rem;
- 
+
 }
 
 .presupuesto1 {
@@ -628,37 +633,39 @@ h3>a {
 .presupuesto1>input {
     width: 21%;
 }
+
 #aviso {
-    display:none;
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     position: fixed;
-    top:37.5%;
-    left:37.5%;
+    top: 37.5%;
+    left: 37.5%;
     width: 40%;
     height: 23%;
-    background-color:#fff;
+    background-color: #fff;
     border: 5px solid rgba(54, 73, 78, 0.8);
     justify-content: end;
     margin: 10px;
     border-radius: 10px;
-    
+
 }
 
-.textoAviso{
+.textoAviso {
     grid-column: 1/3;
     grid-row: 2/3;
-    color:black;
+    color: black;
     font-weight: 700;
     text-align: center;
     font-size: larger;
 }
-.advertencia{
+
+.advertencia {
     grid-column: 1/2;
     grid-row: 1/2;
     width: 64px;
     height: 64px;
-    margin:25px;
+    margin: 25px;
 }
 
 .cerrar {
@@ -668,14 +675,16 @@ h3>a {
     grid-column: 2/3;
     grid-row: 1;
     margin: 10px;
-    
+
 }
+
 .cerrar>button {
     background-color: #fff;
     border: none;
     cursor: pointer;
-    
+
 }
+
 .cerrar>button>img {
     width: 16px;
     height: auto;
@@ -691,6 +700,7 @@ h3>a {
     margin: 10px;
 
 }
+
 .titulo2 {
     grid-row: 3;
 }
@@ -698,16 +708,18 @@ h3>a {
 .presupuesto2>input {
     font-size: small;
 }
+
 .presupuesto2 {
     grid-column: 1/6;
     grid-row: 4;
-   
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
 }
+
 .presupuestoServicios>section>input,
 .presupuestoServicios>section>textarea {
     padding: 10px 10px;
@@ -727,35 +739,38 @@ h3>a {
 .presupuesto3 {
     grid-column: 4/6;
     grid-row: 7;
-   
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.presupuesto8{
+
+.presupuesto8 {
     grid-column: 1/5;
     grid-row: 5;
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
 .presupuesto7 {
     grid-column: 5/6;
     grid-row: 5;
-   
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
 }
+
 .presupuesto4 {
     grid-column: 1/4;
     grid-row: 7;
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -770,7 +785,7 @@ h3>a {
 .presupuesto5 {
     grid-column: 1/3;
     grid-row: 11;
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -782,7 +797,7 @@ h3>a {
 .presupuesto6 {
     grid-column: 3/6;
     grid-row: 11;
-   
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -800,14 +815,14 @@ h3>a {
 
 .botones>button {
     padding: 10px 30px;
-    background-color:  rgba(72, 169, 166, 1);
-    border:none;
+    background-color: rgba(72, 169, 166, 1);
+    border: none;
     color: #fff;
     margin-bottom: 10px;
 }
 
 .botones>button:hover {
-    background-color:  rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .error {
@@ -954,34 +969,36 @@ footer {
     height: 12vh;
 }
 
-.zona>.enlacesLogotipo>img{
+.zona>.enlacesLogotipo>img {
     width: 100px;
     height: 100px;
     margin: 7px;
 }
 
 .cuerpo {
-    height: 76vh;
+    /*height: 100vh;*/
     display: grid;
-    grid-template-areas: 
-    "navCuerpo divCuerpo";
+    grid-template-areas:
+        "navCuerpo divCuerpo";
     grid-template-columns: 10% 90%;
     grid-template-rows: 100%;
 }
 
 .navCuerpo {
     background-color: rgba(72, 169, 166, 0.5);
-    border-right:3px solid rgba(54, 73, 78, 1);
+    border-right: 3px solid rgba(54, 73, 78, 1);
+    min-height: 100vh;
 
 }
 
 .divCuerpo {
-    background-color:#f2f2f2;
+    background-color: #f2f2f2;
     width: 80vw;
 }
 
 .navCuerpo li {
-    border-bottom: 2px solid rgba(54, 73, 78, 1);;
+    border-bottom: 2px solid rgba(54, 73, 78, 1);
+    ;
     width: 100%;
     margin: auto;
     list-style: none;
@@ -994,184 +1011,269 @@ footer {
 
 .navCuerpo li:hover {
     background-color: rgba(54, 73, 78, 0.3);
-    
+
 }
+
 .navCuerpo li a {
     margin: 0;
 }
-.navCuerpo li a:hover{
-    color:rgba(54, 73, 78, 1.5);;
+
+.navCuerpo li a:hover {
+    color: rgba(54, 73, 78, 1.5);
+    ;
     text-decoration: none;
 }
 
 .navCuerpo h3 {
     margin: 15px auto;
     text-align: center;
-    color:rgba(219, 22, 47, 1);
+    color: rgba(219, 22, 47, 1);
     font-weight: 100;
-   
+
 
 }
 
 .divCuerpo>h3 {
     margin: 15px auto;
     text-align: center;
-    color:rgba(54, 73, 78, 1);
+    color: rgba(54, 73, 78, 1);
 
 }
 
 .divCuerpo>h4 {
     margin: 15px auto;
 }
-#buscar{
+
+#buscar {
     margin-right: 2.5em;
-    padding: 5px ;
+    padding: 5px;
 }
-.campos{
+
+.campos {
     width: 100%;
-    height: 5vh;
+    height: 4vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     /*border: 1px solid black;*/
     align-items: center;
 }
+
 .campos p {
     margin: 0.1em;
 }
 
-.campos p>span{
-    color:rgba(219, 22, 47, 1);
+.campos p>span {
+    color: rgba(219, 22, 47, 1);
     font-style: italic;
     font-weight: 100;
-    
+
 
 }
-.datos{
+
+.datos {
     width: 88vw;
-    height:65vh;
+    height: 65vh;
     /*border: 3px solid blue;*/
 
 }
+
 .datos h4 {
     width: 100%;
-    margin: 15px;
+    margin: 10px;
     text-align: center;
     font-size: 1.2em;
 
 }
 
-.tabla{
+.tabla {
     width: 70%;
-    border:1px solid black;
-    margin:35px auto;
+    border: 1px solid black;
+    margin: 35px auto;
     border-collapse: collapse;
-    
+
 }
 
-th{
+th {
     width: 120px;
     background-color: rgba(54, 73, 78, 0.9);
     padding: 5px 3px;
     border: 1px solid black;
-    color:#fff;
+    color: #fff;
 }
 
-td{
+td {
     font-size: small;
     margin: auto;
     text-align: center;
-    border:1px solid rgba(54, 73, 78, 0.9);
+    border: 1px solid rgba(54, 73, 78, 0.9);
     padding: 5px 7px;
-    color: blue;/*rgba(219, 22, 47, 1);*/
+    color: blue;
+    /*rgba(219, 22, 47, 1);*/
 }
 
-.impar{
+.impar {
     background-color: #fff;
 }
-.par{
+
+.par {
     background-color: rgba(72, 169, 166, 0.3);
 }
 
-.btnEditar{
-    width: 3.5em;
-    background-color:rgba(72, 169, 166, 1) ;
+.btnEditar,
+.btnImprimir {
+    width: 5em;
+    background-color: rgba(72, 169, 166, 1);
     margin: 7px;
     padding: 5px 7px;
-    border:none;
-    color:#fff;
+    border: none;
+    color: #fff;
 }
 
 
 
-.btnBorrar{
-    width: 3.5em;
-    background-color:rgba(219, 22, 47, 1); 
+.btnBorrar,
+.btnOferta,
+.btnVer,
+.btnGuardar {
+    width: 5em;
+    background-color: rgba(219, 22, 47, 1);
     margin: 7px;
     padding: 5px 7px;
-    border:none;
-    color:#fff;
+    border: none;
+    color: #fff;
 }
 
-.btnVer{
-    width: 3.5em;
-    background-color:blue ;
-    margin: 7px;
-    padding: 5px 7px;
-    border:none;
-    color:#fff;
+.btnVer,
+.btnGuardar {
+    background-color: blue;
 }
 
-.btnEditar:hover, .btnVer:hover, .btnBorrar:hover {
+
+.btnOferta {
+    background-color: rgba(54, 73, 78, 0.9);
+}
+
+.btnPulsado {
+    background-color: black;
+}
+
+.btnEditar:hover,
+.btnVer:hover,
+.btnBorrar:hover,
+.btnGuardar:hover,
+.btnOferta:hover,
+.btnImprimir:hover {
     background-color: black;
 }
 
 
-.celdaBtn{
+.celdaBtn {
     display: flex;
-    border:none;
+    border: none;
 
 }
 
-.datosPresupuesto{
-    background-color:rgba(72, 169, 166, 1);
-    width: 30%;
-    margin: 5% auto;
-    padding: 20px;
+.datosPresupuesto {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    padding: 25px;
+    font-size: smaller;
 }
 
-.datosPresupuesto p{
-    margin:5px;
+.datosPresupuesto p {
+    margin: 2px 5px;
 
 }
 
-.datosPresupuesto span{
-    color:#fff;
+.datosPresupuesto input,
+.datosOferta input {
+    border: none;
+    margin: 1px;
+    padding: 5px;
+    color: blue;
+    /*border:1px solid black;*/
+    font-size: smaller;
+    text-align: justify;
+    outline: none;
+
 }
+
+.fechaOferta {
+    margin: 5px;
+}
+
+.divContacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px auto;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(219, 22, 47, 1);
+
+}
+
+.divInfo input {
+    width: 100%;
+    height: 15%;
+    overflow: scroll;
+}
+
+.divBotones {
+    display: flex;
+    justify-content: center;
+}
+
+.divOferta {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
+.datosOferta{
+    display: flex;
+}
+.divOferta h3 {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.divOferta label {
+    margin: 5px;
+}
+.divOferta input {
+    margin: 5px;
+}
+
 
 /*---RESPONSIVE--*/
 @media only screen and (max-width: 1024px) {
     .enlacesLogotipo>img {
         width: 100px;
-        height: 100px;
         margin: 1vh;
     }
 
-    .navegador{
+    .navegador {
         display: none;
     }
+
     .tituloPrincipal {
         color: rgba(219, 22, 47, 1);
         font-size: 5vh;
     }
+
     .tituloSecundario {
         text-align: center;
         margin-top: 13px;
         width: 85%;
     }
 
-    #sobreNosotros{
-        display:flex;
+    #sobreNosotros {
+        display: flex;
         padding: 10px;
         flex-direction: column;
         align-items: center;
@@ -1183,7 +1285,7 @@ td{
         margin: 10px;
     }
 
-    .textosobreNosotros>p{
+    .textosobreNosotros>p {
         width: 70%;
         margin: 10px;
     }
@@ -1197,45 +1299,46 @@ td{
     }
 
     .card {
-        width:42%;
+        width: 42%;
         margin: 30px 10px;
     }
 
-    .card > div > ul > li {
+    .card>div>ul>li {
 
         margin-top: 15px;
     }
 
-    .otros{
+    .otros {
         flex-wrap: wrap;
         margin: 10px;
     }
 
-    .aMedida{
+    .aMedida {
         width: 45%;
         margin: 10px;
         position: relative;
     }
 
-  
+
     .aMedida>h3 {
-        position:absolute;
+        position: absolute;
         text-align: center;
         text-decoration: none;
-        color:white;
+        color: white;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: x-large;
     }
-    .aMedida>p{
+
+    .aMedida>p {
         display: none;
-        
+
     }
 
-    .aMedida>img{
+    .aMedida>img {
         margin: 10px;
-         
+
     }
 
     #contacto {
@@ -1248,97 +1351,103 @@ td{
         background-size: cover;
         background-position: center;
         margin: 0;
-        
+
     }
+
     .presupuestoServicios {
         width: 95%;
         height: 100vh;
         left: 1px;
-      }
-      footer{
-        grid-template-columns: repeat(3,1fr);
-        gap:3px;
-      }
+    }
 
-      .footerSection{
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+    }
+
+    .footerSection {
         border-right: none;
-      }
+    }
 
-      .footerSection>div>a {
+    .footerSection>div>a {
         text-align: center;
-      }
-      .rrss{
-        display:block;
-        position: fixed;
-        left:1%;
-        top:45%;
-        }
+    }
 
-    .rrss1{
+    .rrss {
+        display: block;
+        position: fixed;
+        left: 1%;
+        top: 45%;
+    }
+
+    .rrss1 {
         flex-direction: column;
     }
 
-    .footerSection > div > a {
+    .footerSection>div>a {
         margin: 0px auto;
-      }
-
-      .rrss>h4{
-        display:none;
-      }
-      .contactoInputs {
-        margin: 0;
-       }
-
-    .contactoImagen {
-        display:none;
     }
 
-      .contactoInputs> input, .contactoInputs > textarea {
+    .rrss>h4 {
+        display: none;
+    }
+
+    .contactoInputs {
+        margin: 0;
+    }
+
+    .contactoImagen {
+        display: none;
+    }
+
+    .contactoInputs>input,
+    .contactoInputs>textarea {
         width: 95%;
-      }
-      .desplegable {
-        display:block;
+    }
+
+    .desplegable {
+        display: block;
         position: fixed;
         width: 200px;
         height: auto;
         right: 5%;
-        top:5%;
-      }
+        top: 5%;
+    }
 
-      .desplegable>button {
-        display:block;
+    .desplegable>button {
+        display: block;
         position: absolute;
-        top:25%;
+        top: 25%;
         right: 20%;
         background-color: transparent;
         border: none;
         cursor: pointer;
         width: 20%;
 
-      }
+    }
 
-      .desplegable>button>img {
+    .desplegable>button>img {
         width: 100%;
         height: auto;
 
-      }
+    }
 
-      .accesos {
+    .accesos {
         display: flex;
-        background-color:rgba(219, 22, 47, 0.95);
+        background-color: rgba(219, 22, 47, 0.95);
         width: 100%;
         position: absolute;
         right: 14%;
         margin: 18% 10%;
-        border:1px solid black;
-
-        
-
-      }
+        border: 1px solid black;
 
 
 
-      .accesos>li{
+    }
+
+
+
+    .accesos>li {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -1349,34 +1458,35 @@ td{
         width: 100%;
         border-bottom: 1px solid rgba(54, 73, 78, 1);
         height: 5vh;
-        
-   
-      }
 
-      .accesos a {
+
+    }
+
+    .accesos a {
         cursor: pointer;
-      }
+    }
 
 
-      .desplegable>ul>li>a {
+    .desplegable>ul>li>a {
         margin: 15px auto;
         align-items: center;
         text-decoration: none;
         width: 100%;
         height: 100%;
-  
-      }
 
-      .desplegable>ul>li:hover{
+    }
+
+    .desplegable>ul>li:hover {
         background-color: rgba(54, 73, 78, 1);
-      }
+    }
 
-      .desplegable>ul>li>a:hover {
-        color:white;
-      }
+    .desplegable>ul>li>a:hover {
+        color: white;
+    }
 
 
 }
+
 @media only screen and (max-width: 550px) {
 
     body {
@@ -1431,12 +1541,13 @@ td{
     .aMedida {
         width: 90%;
         margin: auto;
-      }
-
-    .aMedida>img{
-        margin: 10px;
-          
     }
+
+    .aMedida>img {
+        margin: 10px;
+
+    }
+
     #servicios {
         flex-direction: column;
         align-self: center;
@@ -1531,11 +1642,9 @@ td{
         grid-row: 4;
         grid-column: 1/5;
     }
-    
-    .presupuestoServicios{
+
+    .presupuestoServicios {
         width: 95%;
         left: 7px;
     }
 }
-
-
