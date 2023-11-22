@@ -1230,13 +1230,18 @@ td {
 .divOferta {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
+    height: 60vh;
+
 
 }
 
-.datosOferta{
+.datosOferta {
     display: flex;
 }
+
 .divOferta h3 {
     margin: auto;
     margin-bottom: 10px;
@@ -1245,9 +1250,19 @@ td {
 .divOferta label {
     margin: 5px;
 }
+
 .divOferta input {
     margin: 5px;
 }
+
+.ck.ck-editor {
+    margin: 20px auto;
+    overflow-y: scroll;
+    height: 30vh;
+    width: 95%;
+  }
+
+
 
 
 /*---RESPONSIVE--*/
