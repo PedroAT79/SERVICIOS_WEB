@@ -2,8 +2,6 @@
 const urlPresupuestos = 'http://localhost:4500/webdev/presupuestos';
 
 
-
-
 //Funciones para mostrar los datos registrados en bbdd:
 function obtenerPresupuestos(url) {
   let datosJson;
@@ -60,7 +58,7 @@ function crearTablaPresup(datosJson) {
         }
 
         if (i === 7 || i === 11) {
-          cell.textContent = tratamientoFecha(obj[key]);
+          cell.textContent = tratamientoFecha2(obj[key]);
         } else {
           cell.textContent = obj[key];
         }
@@ -96,8 +94,8 @@ function crearTablaPresup(datosJson) {
 
 }
 
-
 window.addEventListener('load', obtenerPresupuestos(urlPresupuestos));
+//window.addEventListener('load', estilosEnlacesPppales());
 
 window.addEventListener('DOMContentLoaded', (event) => {
   const datosContainer = document.querySelector('.datos');
@@ -127,8 +125,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const inputs = document.querySelectorAll('.divContacto input');
       inputs.forEach(function (input) {
         if (input.disabled = true) {
-          input.disabled = false;
+          //input.disabled = false;
           document.querySelector('.btnOferta').classList.add('btnPulsado');
+          document.querySelector('.btnEditar').style.display = 'none';
+          document.querySelector('.btnOferta').style.display = 'none';
           
         }else{
           console.log('lo que sea');
@@ -148,20 +148,54 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const labelFechaOferta = document.createElement('label');
       const inputFechaOferta = document.createElement('input');
       const fecha = new Date();
+      const cotOfertaLabel = document.createElement('label');
+      const cotOfertaInput = document.createElement('input');
       const labelArchivo = document.createElement('label');
       const inputArchivo = document.createElement('input');
       const labelPlazos = document.createElement('label');
       const inputPlazos = document.createElement('input');
       const labelPrimerPago = document.createElement('label');
       const inputPrimerPago = document.createElement('input');
+      const btnGuardarOferta = document.createElement('button');
+      const btnBorrarCampos = document.createElement('button');
+      const fechaEntregaLabel = document.createElement('label');
+      const fechaEntregaInput = document.createElement('input');
+      const divBotonesOferta = document.createElement('div');
+      cotOfertaInput.classList.add('cotOferta');
+      const cotizacion = document.querySelector('.divContacto .cotizacion').value;
+      if(cotizacion !== 0){
+        cotOfertaInput.value = cotizacion;
+      } else {
+        console.log(cotizacion);
+       cotOfertaInput.value = 0;
+      }
+
+      fechaEntregaLabel.textContent = 'Fecha entrega estimada:';
+      fechaEntregaInput.type = 'date';
+      fechaEntregaInput.classList.add('entrega');
+      fechaEntregaLabel.appendChild(fechaEntregaInput);
+
+      cotOfertaLabel.textContent = 'Cotizacion oferta (€):'
+      cotOfertaInput.type = 'number';
+      cotOfertaLabel.appendChild(cotOfertaInput);
+      btnGuardarOferta.classList.add('btnGuardar');
+      btnGuardarOferta.textContent = 'Guardar';
+      btnBorrarCampos.textContent = 'Borrar';
+      btnBorrarCampos.classList.add('btnBorrar');
       labelPlazos.textContent = 'Nº Plazos de pago:'
+      inputPlazos.classList.add('plazos');
       labelPlazos.appendChild(inputPlazos);
-      labelPrimerPago.textContent = '% Importe por plazo:'
+      labelPrimerPago.textContent = 'Importe por plazo (€):'
+      inputPrimerPago.setAttribute('disabled', 'true');
+      inputPrimerPago.value = 0;
+      inputPrimerPago.type ='number';
+      inputPrimerPago.classList.add('importePlazo');
       labelPrimerPago.appendChild(inputPrimerPago);
       inputFechaOferta.value = tratamientoFecha2(fecha);
       inputFechaOferta.classList.add('fechaOferta');
+      inputFechaOferta.setAttribute('disabled', 'true');
       labelFechaOferta.textContent = 'Fecha Oferta:';
-      tituloOferta.textContent = 'Crear oferta:'
+      tituloOferta.textContent = 'Oferta:'
       labelArchivo.textContent = 'Insertar Archivo:';
       inputArchivo.classList.add('adjuntoOferta');
       inputArchivo.setAttribute('type', 'file');
@@ -170,20 +204,57 @@ window.addEventListener('DOMContentLoaded', (event) => {
       textAreaOferta.classList.add('textoOferta');
       divOferta.appendChild(tituloOferta);
       divOferta.appendChild(datosPpalOferta);
+      datosPpalOferta.appendChild(fechaEntregaLabel);
+      datosPpalOferta.appendChild(cotOfertaLabel);
       datosPpalOferta.appendChild(labelPlazos);
       datosPpalOferta.appendChild(labelPrimerPago);
       datosPpalOferta.appendChild(labelArchivo);
       datosPpalOferta.appendChild(labelFechaOferta);
       labelFechaOferta.appendChild(inputFechaOferta);
       divOferta.appendChild(textAreaOferta);
+      divOferta.appendChild(divBotonesOferta);
+      divBotonesOferta.appendChild(btnGuardarOferta);
+      divBotonesOferta.appendChild(btnBorrarCampos);
       ClassicEditor
         .create( divOferta.querySelector( '#editor' ) )
         .catch( error => {
             console.error( error );
         } );
+    }else if(target.classList.contains('btnBorrar')) {
+      const cotizOferta = document.querySelector('.cotOferta');
+      const plazosOferta = document.querySelector('.plazos');
+      const importePlazo = document.querySelector('.importePlazo');
+      const entrega = document.querySelector('.entrega');
+      const textArea = ClassicEditor.instances['editor'];
+      const parrafoBorrar = textArea.querySelectorAll('p');
+      entrega.value = 0;
+      cotizOferta.value = 0;
+      plazosOferta.value = 0;
+      importePlazo.value = 0;
+      console.log(parrafoBorrar);
+      if (textArea) {
+        const editable = textArea.editable();
+        editable.find('p').forEach(parrafo =>{
+          parrafo.remove();
+        })
+      }
     }
 
   });
+  window.addEventListener('change',(event)=>{
+    const target = event.target;
+    if(target.classList.contains('plazos')){
+      const cotizOferta = document.querySelector('.cotOferta').value;
+      const plazosOferta = document.querySelector('.plazos').value;
+      const importePlazo = document.querySelector('.importePlazo');
+      if(cotizOferta !== 0) {
+        importePlazo.value = parseFloat(cotizOferta/plazosOferta).toFixed(2);
+      } else {
+        importePlazo.value = 0;
+      }
+    }
+
+  })
 });
 
 function verDatosPresupuesto(id) {
@@ -260,9 +331,9 @@ function crearVistaPresupuesto(datosJson) {
   botonOferta.textContent = 'Ofertar';
 
   divBotones.appendChild(botonEditar);
-  divBotones.appendChild(botonGuardar);
+  //divBotones.appendChild(botonGuardar);
   divBotones.appendChild(botonOferta);
-  divBotones.appendChild(botonBorrar);
+  //divBotones.appendChild(botonBorrar);
   datosPresupuesto.appendChild(divBotones);
 
 }
@@ -303,13 +374,13 @@ function tratamientoCabeceras(key) {
       nuevaKey = 'Funcionalidades';
       break;
     case 'publicoObjetivo':
-      nuevaKey = 'Objetivo';
+      nuevaKey = 'Público objetivo';
       break;
     case 'competencia':
       nuevaKey = 'Competencia';
       break;
     case 'estado':
-      nuevaKey = 'Estado';
+      nuevaKey = 'Estado Oferta';
       break;
     case 'cotizacion':
       nuevaKey = 'Cotización';

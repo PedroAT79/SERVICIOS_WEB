@@ -976,7 +976,7 @@ footer {
 }
 
 .cuerpo {
-    /*height: 100vh;*/
+    height: 150vh;
     display: grid;
     grid-template-areas:
         "navCuerpo divCuerpo";
@@ -1014,13 +1014,21 @@ footer {
 
 }
 
+.navCuerpohover {
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
 .navCuerpo li a {
     margin: 0;
 }
 
 .navCuerpo li a:hover {
-    color: rgba(54, 73, 78, 1.5);
-    ;
+    color: rgba(54, 73, 78, 0.8); ;
+    text-decoration: none;
+}
+
+.navCuerpoLiAHover{
+    color: rgba(72, 169, 166, 1);
     text-decoration: none;
 }
 
@@ -1234,12 +1242,15 @@ td {
     align-items: center;
     margin: 20px;
     height: 60vh;
+    background-color: rgba(54, 73, 78, 0.2);
 
 
 }
 
 .datosOferta {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .divOferta h3 {
@@ -1258,7 +1269,7 @@ td {
 .ck.ck-editor {
     margin: 20px auto;
     overflow-y: scroll;
-    height: 30vh;
+    height: 15vh;
     width: 95%;
   }
 
