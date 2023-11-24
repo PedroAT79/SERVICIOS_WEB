@@ -138,8 +138,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       })
       const divBotones = document.querySelector('.divBotones');
       console.log(divBotones);
-      const divOferta = document.createElement('div');
+      const divOferta = document.createElement('form');
       divOferta.classList.add('divOferta');
+      divOferta.setAttribute('enctype', 'application/x-www-form-urlencoded');
       divBotones.insertAdjacentElement('beforebegin', divOferta);
       const textAreaOferta = document.createElement('textarea');
       const tituloOferta = document.createElement('h4');
@@ -172,20 +173,25 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
       fechaEntregaLabel.textContent = 'Fecha entrega estimada:';
       fechaEntregaInput.type = 'date';
-      fechaEntregaInput.classList.add('entrega');
+      fechaEntregaInput.classList.add('fechaEntrega');
+      fechaEntregaInput.setAttribute('name', 'fechaEntrega');
       fechaEntregaLabel.appendChild(fechaEntregaInput);
 
       cotOfertaLabel.textContent = 'Cotizacion oferta (€):'
       cotOfertaInput.type = 'number';
+      cotOfertaInput.classList.add('cotizacionOferta');
+      cotOfertaInput.setAttribute('name','cotizacionOferta');
       cotOfertaLabel.appendChild(cotOfertaInput);
       btnGuardarOferta.classList.add('btnGuardar');
       btnGuardarOferta.textContent = 'Guardar';
       btnBorrarCampos.textContent = 'Borrar';
       btnBorrarCampos.classList.add('btnBorrar');
       labelPlazos.textContent = 'Nº Plazos de pago:'
-      inputPlazos.classList.add('plazos');
+      inputPlazos.classList.add('plazosPazo');
+      inputPlazos.setAttribute('name', 'plazosPago');
       labelPlazos.appendChild(inputPlazos);
       labelPrimerPago.textContent = 'Importe por plazo (€):'
+      inputPrimerPago.setAttribute('name','importePlazo');
       inputPrimerPago.setAttribute('disabled', 'true');
       inputPrimerPago.value = 0;
       inputPrimerPago.type ='number';
@@ -193,15 +199,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
       labelPrimerPago.appendChild(inputPrimerPago);
       inputFechaOferta.value = tratamientoFecha2(fecha);
       inputFechaOferta.classList.add('fechaOferta');
+      inputFechaOferta.setAttribute('name','fechaOferta');
       inputFechaOferta.setAttribute('disabled', 'true');
       labelFechaOferta.textContent = 'Fecha Oferta:';
       tituloOferta.textContent = 'Oferta:'
       labelArchivo.textContent = 'Insertar Archivo:';
-      inputArchivo.classList.add('adjuntoOferta');
+      inputArchivo.classList.add('adjunto');
       inputArchivo.setAttribute('type', 'file');
       labelArchivo.appendChild(inputArchivo);
       textAreaOferta.setAttribute('id','editor');
-      textAreaOferta.classList.add('textoOferta');
+      textAreaOferta.setAttribute('name', 'observaciones');
+      textAreaOferta.classList.add('observaciones');
       divOferta.appendChild(tituloOferta);
       divOferta.appendChild(datosPpalOferta);
       datosPpalOferta.appendChild(fechaEntregaLabel);
