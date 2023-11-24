@@ -21,6 +21,10 @@ const UsuarioSchema = mongoose.Schema(
         telefono: {
             type: String
         },
+        usuario: {
+            type:String,
+            required:true
+        },
 
         password: {
             type: String,
@@ -42,8 +46,6 @@ const UsuarioSchema = mongoose.Schema(
             type: String,
             required:true
         }
-
-
     },
      {
         timestamps: true//para que nos cree las columnas de editado y creado
