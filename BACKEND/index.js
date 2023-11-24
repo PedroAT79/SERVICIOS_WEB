@@ -2,9 +2,10 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors';
 import conectarDB from './config/db.js';
-import clienteRoutes from './routes/clienteRoutes.js'
 import presupuestoRoutes from './routes/presupuestoRoutes.js'
 import cestaRoutes from './routes/cestaRoutes.js'
+//import usuarioRoutes from './routes/usuarioRoutes.js'
+import ofertaRoutes from './routes/ofertaRoutes.js'
 
 
 
@@ -32,7 +33,8 @@ conectarDB();
 
 
 
-app.use('/webdev/clientes', clienteRoutes);
+//app.use('/webdev/usuarios', usuarioRoutes);
+app.use('/webdev/ofertas', ofertaRoutes);
 app.use('/webdev/cestas', cestaRoutes);
 app.use('/webdev/presupuestos', presupuestoRoutes);
 

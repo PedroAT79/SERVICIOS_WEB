@@ -29,7 +29,8 @@ const ofertaSchema = mongoose.Schema({
     },
     fechaOferta: {
         type: Date,
-        required: true
+        required: true,
+        default:Date.now()
     },
     observaciones: {
         type: String
