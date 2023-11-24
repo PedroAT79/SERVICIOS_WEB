@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 const ofertaSchema = mongoose.Schema({
 
     idPresupuesto: {
-        type: String,
+        type: [mongoose.Schema.ObjectId],
+        ref: 'Presupuesto',
+        required:true
 
     },
     fechaEntrega: {
