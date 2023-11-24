@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const ofertaSchema = mongoose.Schema({
 
     idPresupuesto: {
-        type: [mongoose.Schema.ObjectId],
+        type: mongoose.Schema.ObjectId,
         ref: 'Presupuesto',
         required:true
 
@@ -24,7 +24,7 @@ const ofertaSchema = mongoose.Schema({
         required: true
     },
     adjunto: {
-        type: File
+        type: Buffer
 
     },
     fechaOferta: {
