@@ -45,22 +45,23 @@
                 <li><button class="altaUsuario">Alta Usuario</button></li>
             </ul>
         </section>
-        <section class="usuarioContrasena usuarioSinRegistrar">
+        <form class="usuarioContrasena usuarioSinRegistrar" enctype="application/x-www-form-urlencoded">
             <ul>
                 <button><img src="../imagenes/iconos/volver.png" alt=""></button>
                 <h4>Registro usuario nuevo:</h4>
                 
-                <li><input type="text" name="" class="nombreRegsitro" placeholder="Nombre"></li>
-                <li><input type="text" name="" class="password" placeholder="Apellido"></li>
-                <li><input type="email" name="" class="password" placeholder="Email"></li>
-                <li><input type="text" name="" class="password" placeholder="Razon Social"></li>
-                <li><input type="tel" name="" class="password" placeholder="Teléfono"></li>
+                <li><input type="text" name="nombreReg" class="nombreReg" placeholder="Nombre"></li>
+                <li><input type="text" name="apellidosReg" class="apellidosReg" placeholder="Apellido"></li>
+                <li><input type="email" name="emailReg" class="emailReg" placeholder="Email"></li>
+                <li><input type="text" name="razonSocialReg" class="razonSocialReg" placeholder="Razon Social"></li>
+                <li><input type="tel" name="telefonoReg" class="telefonoReg" placeholder="Teléfono"></li>
                 
-                    <li><input type="text" name="" class="usuario" placeholder="Usuario"></li>
-                <li><input type="text" name="" class="password" placeholder="Password"></li><li><button class="registrarUsuario">Registrar</button></li>
+                    <li><input type="text" name="usuarioReg" class="usuarioReg" placeholder="Usuario"></li>
+                <li><input type="password" name="passwordReg" class="passwordReg" placeholder="Password">
+                </li><li><button class="registrarUsuario">Registrar</button></li>
                 
             </ul>
-        </section>
+        </form>
 
 
     </header>

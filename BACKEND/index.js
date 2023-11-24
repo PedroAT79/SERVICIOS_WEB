@@ -4,7 +4,7 @@ import cors from 'cors';
 import conectarDB from './config/db.js';
 import presupuestoRoutes from './routes/presupuestoRoutes.js'
 import cestaRoutes from './routes/cestaRoutes.js'
-//import usuarioRoutes from './routes/usuarioRoutes.js'
+import usuarioRoutes from './routes/usuarioRoutes.js'
 import ofertaRoutes from './routes/ofertaRoutes.js'
 
 
@@ -31,12 +31,10 @@ const corsOptions = {
  
 conectarDB();
 
-
-
-//app.use('/webdev/usuarios', usuarioRoutes);
 app.use('/webdev/ofertas', ofertaRoutes);
 app.use('/webdev/cestas', cestaRoutes);
 app.use('/webdev/presupuestos', presupuestoRoutes);
+app.use('/webdev/usuarios', usuarioRoutes);
 
 const PORT = process.env.PORT || 4500;
 app.listen(PORT, ()=>{

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import generarToken from '../helpers/generarToken.js';
+import generarId from "../helpers/generarId.js";
 
 const UsuarioSchema = mongoose.Schema(
     {
@@ -46,7 +47,7 @@ const UsuarioSchema = mongoose.Schema(
 
         tokenReg: {
             type: String,
-            default:generarToken(),
+            default:generarId(),
             required:true
         }
     },
