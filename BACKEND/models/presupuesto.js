@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const presupuestoSchema = mongoose.Schema ({
+const presupuestoSchema = mongoose.Schema({
     razonSocial: {
         type: String,
         required: true
@@ -10,25 +10,25 @@ const presupuestoSchema = mongoose.Schema ({
         required: true
     },
     email2: {
-        type:String,
+        type: String,
         required: true
     },
     telefono2: {
         type: String,
     },
     tipoDesarrollo: {
-        type:String,
+        type: String,
         required: true
     },
     descripcion: {
-        type:String,
+        type: String,
         required: true
     },
     fechaEntrega: {
         type: Date
     },
     diseño: {
-        type:String
+        type: String
     },
     funcionalidades: {
         type: String,
@@ -48,15 +48,15 @@ const presupuestoSchema = mongoose.Schema ({
         type: String
     },
     cotizacion: {
-        type:Number,
+        type: Number,
         default: 0
     },
     oferta: {
-        type:String
+        type: String
     }
-    },
+},
     {
-    timestamps: true//para que nos cree las columnas de editado y creado
+        timestamps: true//para que nos cree las columnas de editado y creado
     }
 
 )
