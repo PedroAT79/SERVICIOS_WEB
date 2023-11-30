@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
+import obtenerNumeroRegistro from "../helpers/contadorDeRegistros.js";
 
 const presupuestoSchema = mongoose.Schema({
+    numeroPresupuesto: {
+        type: String
+
+    },
     razonSocial: {
         type: String,
         required: true
@@ -25,28 +30,30 @@ const presupuestoSchema = mongoose.Schema({
         required: true
     },
     fechaEntrega: {
-        type: Date
+        type: Date,
+        default:1/1/1970
     },
     diseño: {
-        type: String
+        type: String,
+        default: 'Sin informacion'
     },
     funcionalidades: {
         type: String,
-        required: true
+        default: 'Sin informacion'
     },
     publicoObjetivo: {
-        type: String
+        type: String,
+        default: 'Sin informacion'
     },
     competencia: {
-        type: String
+        type: String,
+        default: 'Sin informacion'
     },
     estado: {
         type: String,
         default: 'Pendiente'
     },
-    numeroPresupuesto: {
-        type: String
-    },
+
     cotizacion: {
         type: Number,
         default: 0
@@ -59,7 +66,14 @@ const presupuestoSchema = mongoose.Schema({
         timestamps: true//para que nos cree las columnas de editado y creado
     }
 
-)
+);
+
+presupuestoSchema.pre('save', async function (next) {
+
+    const numeroRegistro = await obtenerNumeroRegistro(Presupuesto);
+    this.numeroPresupuesto = numeroRegistro
+
+})
 
 const Presupuesto = mongoose.model('Presupuesto', presupuestoSchema);
 
