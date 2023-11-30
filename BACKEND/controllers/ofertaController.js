@@ -23,7 +23,7 @@ const listarOfertas = async (req, res) => {
         return res.status(400).json({ error: error.message });
     }
 
-    return res.json({ msg: ofertas });
+    res.json({ofertas });
 }
 
 const listarUnaOferta = async (req, res) => {
