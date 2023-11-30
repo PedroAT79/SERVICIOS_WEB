@@ -1,21 +1,26 @@
 import mongoose from "mongoose";
-
+import obtenerNumeroRegistro from "../helpers/contadorDeRegistros.js";
 const ofertaSchema = mongoose.Schema({
 
     idPresupuesto: {
         type: mongoose.Schema.ObjectId,
         ref: 'Presupuesto',
-        required:true
+        required: true
 
     },
-    fechaEntrega: {
-        type: Date
+    numeroOferta: {
+        type: String
+    },
+    numeroPresupuesto: {
+        type: String,
+        required:true,
+        default: 'Falta informacion'
     },
     cotizacionOferta: {
         type: Number,
         required: true
     },
-    plazosPago: {
+     plazosPago: {
         type: Number,
         required: true
     },
@@ -23,14 +28,12 @@ const ofertaSchema = mongoose.Schema({
         type: Number,
         required: true
     },
+    fechaEntrega: {
+        type: Date,
+        required: true
+    },
     adjunto: {
         type: Buffer
-
-    },
-    fechaOferta: {
-        type: Date,
-        required: true,
-        default:Date.now()
     },
     observaciones: {
         type: String
@@ -41,6 +44,12 @@ const ofertaSchema = mongoose.Schema({
 
     }
 )
+
+ofertaSchema.pre('save', async function (next) {
+    this.fechaOferta = Date.now();
+    const numeroRegistro = await obtenerNumeroRegistro(Oferta);
+    this.numeroOferta = numeroRegistro;
+})
 
 const Oferta = mongoose.model('Oferta', ofertaSchema);
 export default Oferta;
