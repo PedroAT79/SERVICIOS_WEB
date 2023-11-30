@@ -2,9 +2,13 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import generarToken from '../helpers/generarToken.js';
 import generarId from "../helpers/generarId.js";
+import obtenerNumeroRegistro from "../helpers/contadorDeRegistros.js";
 
 const UsuarioSchema = mongoose.Schema(
     {
+        usuarioCont: {
+            type: String
+        },
         nombreReg: {
             type: String,
             required: true
@@ -14,19 +18,20 @@ const UsuarioSchema = mongoose.Schema(
             required: true
         },
         emailReg: {
-            type:String,
+            type: String,
             required: true
         },
         razonSocialReg: {
-            type:String
+            type: String
         },
 
         telefonoReg: {
-            type: String
+            type: String,
+            default: 'Sin informacion'
         },
         usuarioReg: {
-            type:String,
-            required:true
+            type: String,
+            required: true
         },
 
         passwordReg: {
@@ -35,38 +40,46 @@ const UsuarioSchema = mongoose.Schema(
         },
 
         rolReg: {
-            type:String,
-            default:'usuario'
+            type: String,
+            default: 'usuario'
         },
 
         fechaRegistroReg: {
-            type:Date,
-            default:Date.now(),
-            required:true
+            type: Date,
+            default: Date.now(),
+            required: true
         },
 
         tokenReg: {
             type: String,
-            default:generarId(),
-            required:true
-        }
+            default: generarId(),
+            required: true
+        },
+
+
     },
-     {
+    {
         timestamps: true//para que nos cree las columnas de editado y creado
     }
 )
 
 //Encriptado del usuario:
-UsuarioSchema.pre('save', async function(next) {
-    if(!this.isModified("passwordReg")) {
+UsuarioSchema.pre('save', async function (next) {
+    if (!this.isModified("passwordReg")) {
         next();
     }
     const salt = await bcrypt.genSalt(10);
     this.passwordReg = await bcrypt.hash(this.passwordReg, salt);
+
+    const numeroRegistro = await obtenerNumeroRegistro(Usuario);
+    this.usuarioCont = numeroRegistro;
+
 })
 
+
+
 //Autencacion del usuario:
-UsuarioSchema.methods.comprobarPassword = async function(passwordFormulario){
+UsuarioSchema.methods.comprobarPassword = async function (passwordFormulario) {
     return await bcrypt.compare(passwordFormulario, this.passwordReg);
 }
 
