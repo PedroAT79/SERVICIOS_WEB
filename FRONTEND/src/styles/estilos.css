@@ -1079,7 +1079,7 @@ footer {
 
 }
 
-.datos {
+.datos, .listadoOferta {
     width: 88vw;
     height: 65vh;
     /*border: 3px solid blue;*/
