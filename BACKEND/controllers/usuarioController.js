@@ -58,7 +58,7 @@ const editarUnUsuario = async (req, res) => {
             usuarioReg,
             passwordReg,
             rolReg
-        }, { new: true });
+        }, { new: true }); 
         if (!usuarioActualizado) {
             return res.status(404).json({ msg: 'Usuario no encontrado' });
         }
