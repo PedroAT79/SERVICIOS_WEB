@@ -1,0 +1,139 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <title>Servicios de Diseño y Creacion de Paginas y Aplicaciones Web</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="enlacesLogotipo">
+            <img src="../imagenes/logotipoEmpresa/logotipo.png" alt="">
+            <nav class="navegador desplegable">
+                <button><img src="../imagenes/iconos/menu.png" alt=""></button>
+                <ul class="accesos">
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+
+                </ul>
+
+            </nav>
+        </section>
+        <form class="presupuestoServicios1" enctype="application/x-www-form-urlencoded">
+            <section class="presupuestoHead">
+
+                <h3>Solicitud de presupuesto a medida:</h3>
+                <button><img class="cerrarVentana" src="../imagenes/iconos/icono-cerrar.png" /></button>
+            </section>
+
+            <section class="presupuesto1">
+                <input type="text" placeholder="Nombre o Razón social" name="razonSocial" id="razonSocial">
+                <input type="text" placeholder="CIF / DNI" name="dni" id="dni">
+                <input type="email" placeholder="E-mail" name="email2" id="email2">
+                <input type="tel" placeholder="Teléfono" name="telefono2" id="telefono2">
+                <input name="fechaEntrega" id="" rows="5" placeholder="Fecha entregas aprox."
+                    class="fechaEntrega"></input>
+            </section>
+
+            <section class="">
+                <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="web estatica">Web
+                Estática</input>
+                <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio
+                electrónico</input>
+                <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación
+                empresarial</input>
+                <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de
+                reservas</input>
+                <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</input>
+            </section>
+            <h4 class="titulo2">Tipo de desarrollo -- Plazos de entrega</h4>
+            <section class="">
+                <textarea name="descripcion" id="descripcion" rows="5"
+                    placeholder="Descripcion del proyecto"></textarea>
+            </section>
+
+            </section>
+            <h4 class="titulo3">Diseño y estilo, referencias -- Funcionalidades requeridas </h4>
+            <section class="">
+                <textarea name="diseño" id="" rows="5" class="diseño"
+                    placeholder="Si tienes algun referente sobre el estilo añade aqui la dirección web, añade paleta de colores si quieres alguna en particular, tipo de fuente, etc..."></textarea>
+            </section>
+            <section class="">
+                <textarea name="funcionalidades" id="funcionalidades" rows="5"
+                    placeholder="Enumera las características y funciones específicas que necesita. Esto puede incluir formularios de contacto, sistemas de gestión de contenido, tiendas en línea, sistemas de reservas, etc."></textarea>
+            </section>
+            <h4 class="titulo5">Público objetivo -- Competencia</h4>
+            <section class="">
+                <textarea name="publicoObjetivo" class="publicoObjetivo" rows="5"
+                    placeholder="¿A quién se dirige la página web o la aplicación? Conocer el público objetivo es esencial para adaptar el diseño y la funcionalidad."></textarea>
+            </section>
+            <section class="">
+                <textarea class="competencia" name="competencia" rows="5"
+                    placeholder=" ¿Tiene competidores en línea? Conocer a la competencia puede proporcionar ideas y enfoques para destacar."></textarea>
+            </section>
+            <section class="botones">
+                <button class="botonEnviarPresupuesto" type="submit">Enviar</button>
+                <button class="" type="reset">Reset</button>
+            </section>
+
+        </form>
+        <section id="aviso">
+
+            <img class="advertencia" src="../imagenes/iconos/advertencia.png" alt="" srcset="">
+            <div class="cerrar"><button id="cerrarVentana"><img class="cerrarVentana"
+                        src="../imagenes/iconos/icono-cerrar.png" /></button></div>
+            <p class="textoAviso">Seleccione un tipo de desarrollo, gracias.</p>
+
+        </section>
+        </main>
+
+    </header>
+    <main>
+
+        <footer>
+            <section class="footerSection soporte">
+                <h4>Soporte</h4>
+                <div class="soporte1">
+                    <a href="faqs.html">Preguntas frecuentes</a>
+                    <a href="politicas.html#contactoLegis" target="_blank">Contacto</a>
+                </div>
+            </section>
+            <section class="footerSection contenido">
+                <h4>Contenido</h4>
+                <div class="contenido1">
+                    <a href="portafolio.html">Portafolio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#sobreNosotros">Sobre Nosotros</a>
+                    <a href="curriculum.html">Curriculo</a>
+                </div>
+            </section>
+            <section class="footerSection legal">
+                <h4>Informacion Legal</h4>
+                <div class="legal1">
+                    <a href="politicas.html#condicionesCompra" target="_blank">Términos y Condiciones de compra</a>
+                    <a href="politicas.html#privacidad" target="_blank">Política de privacidad</a>
+                    <a href="politicas.html#cookies" target="_blank">Política de cookies</a>
+                    <a href="politicas.html#intelectual" target="_blank">Propiedad Intelectual</a>
+                    <a href="politicas.html#uso" target="_blank">Condiciones de Uso</a>
+                    <a href="politicas.html#legal" target="_blank">Aviso Legal</a>
+                </div>
+            </section>
+            <section class="footerSection rrss">
+                <h4>Redes Sociales</h4>
+                <div class="rrss1">
+                    <a><img src="../imagenes/rrss/facebook.png" alt="Enlace facebook"></a>
+                    <a href=""><img src="../imagenes//rrss/instagram (1).png" alt="Enlace instagram"></a>
+                    <a href=""><img src="../imagenes/rrss/social.png" alt="Enlace Linkedin"></a>
+                    <a href=""><img src="../imagenes/rrss/icons8-twitterx-48.png" alt="Enlace Linkedin"></a>
+                </div>
+            </section>
+            <section class="footerSection copyright">
+                <h4>@2023 Copyright --@creadorWeb.es Todos los derechos reservados.</h4>
+            </section>
+        </footer>
+        <script src="../scripts/index.js"></script>
+    </body>
+    
+    </html>

@@ -10,7 +10,7 @@
 
 <body>
     <header class="encabezado">
-        <section class="enlacesLogotipo">
+        <div class="enlacesLogotipo">
             <img src="../imagenes/logotipoEmpresa/logotipo.png" alt="">
             <nav class="navegador desplegable">
                 <button><img src="../imagenes/iconos/menu.png" alt=""></button>
@@ -19,26 +19,27 @@
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
-                    <li><a href="" class="carrito"><img src="../imagenes/iconos/carrito-de-compras (1).png" alt=""></a>
+                    <li><a href="" class="carrito"><img src="../imagenes/iconos/carrito-de-compras.png" alt=""></a>
                     </li>
                     <li><a class="accesoUsuario">Acceso/Registro</a></li>
 
                 </ul>
 
             </nav>
-        </section>
+        </div>
 
-        <h1 class="tituloPrincipal">WebbDesigners.es</h1>
+        <h1 class="tituloPrincipal">@creadordWeb.es</h1>
         <h2 class="tituloSecundario">Construyendo Conexiones Digitales, Transformando Negocios</h2>
         <button class="contacto">Hablame de tu proyecto</button>
         <section class="usuarioContrasena usuarioRegistrado">
+
             <ul>
                 <button><img src="../imagenes/iconos/icono-cerrar.png" alt=""></button>
                 <li>
                     <h4>Acceso de usuario:</h4>
                 </li>
-                <li><input type="text" name="" class="usuario" placeholder="Usuario"></li>
-                <li><input type="text" name="" class="password" placeholder="Password"></li>
+                <li><input type="text" name="usuarioAccess" class="usuario" placeholder="Usuario"></li>
+                <li><input type="text" name="passwordAccess" class="password" placeholder="Password"></li>
                 <li><button class="accessButton">Acceder</button>
                     <button class="resetButton" type="reset">Reset</button>
                 </li>
@@ -49,17 +50,18 @@
             <ul>
                 <button><img src="../imagenes/iconos/volver.png" alt=""></button>
                 <h4>Registro usuario nuevo:</h4>
-                
+
                 <li><input type="text" name="nombreReg" class="nombreReg" placeholder="Nombre"></li>
                 <li><input type="text" name="apellidosReg" class="apellidosReg" placeholder="Apellido"></li>
                 <li><input type="email" name="emailReg" class="emailReg" placeholder="Email"></li>
                 <li><input type="text" name="razonSocialReg" class="razonSocialReg" placeholder="Razon Social"></li>
                 <li><input type="tel" name="telefonoReg" class="telefonoReg" placeholder="Teléfono"></li>
-                
-                    <li><input type="text" name="usuarioReg" class="usuarioReg" placeholder="Usuario"></li>
+
+                <li><input type="text" name="usuarioReg" class="usuarioReg" placeholder="Usuario"></li>
                 <li><input type="password" name="passwordReg" class="passwordReg" placeholder="Password">
-                </li><li><button class="registrarUsuario">Registrar</button></li>
-                
+                </li>
+                <li><button class="registrarUsuario">Registrar</button></li>
+
             </ul>
         </form>
 
@@ -75,20 +77,19 @@
             </div>
             <article class="textosobreNosotros">
                 <h2>"Transforma tu Visión en Realidad Digital"</h2>
-                <p>En "webbDeveloper.es", nuestra pasión es dar vida a tus ideas y convertirlas en experiencias
-                    digitales asombrosas. ¿Tienes una visión para un sitio web excepcional o una aplicación innovadora?
-                    Nosotros somos los arquitectos digitales que te ayudarán a construirlo.</p>
-                <p>Nuestro equipo de diseñadores y desarrolladores está listo para hacer que tu proyecto destaque en el
-                    mundo en línea. Creamos páginas web y aplicaciones que no solo son visualmente impresionantes, sino
-                    también funcionales y efectivas.</p>
-                <p> En "webbDeveloper.es", no solo diseñamos y desarrollamos sitios web y aplicaciones; creamos
-                    soluciones que impulsan tu éxito. Nuestra creatividad se combina con una sólida experiencia técnica
-                    para ofrecerte resultados excepcionales.</p>
-                <p>¡No esperes más! Lleva tu visión al siguiente nivel con nosotros. Juntos, hagamos que tu proyecto
-                    cobre vida y triunfe en el mundo digital. Tu visión es nuestro desafío, y estamos listos para
-                    superarlo.</p>
-                <p>Contacta con nosotros hoy y descubre cómo podemos convertir tus sueños digitales en una realidad
-                    impresionante. El futuro digital te espera.</p>
+                <p>En mi mundo digital, mi pasión radica en dar vida a tus ideas y transformarlas en experiencias en
+                    línea asombrosas. ¿Tienes una visión para un sitio web excepcional o una aplicación innovadora? Soy
+                    el arquitecto digital que te guiará en la construcción de ese sueño.</p>
+                <p>Como diseñador y desarrollador, estoy preparado para hacer que tu proyecto destaque en el vasto mundo
+                    de internet. No solo creo páginas web y aplicaciones visualmente impactantes, sino que también las
+                    hago funcionales y efectivas.</p>
+                <p> Mi enfoque va más allá del diseño y desarrollo; creo soluciones que impulsarán tu éxito. Mi
+                    creatividad se fusiona con una sólida experiencia técnica para ofrecerte resultados excepcionales.
+                </p>
+                <p>No pierdas más tiempo, juntos podemos llevar tu visión al siguiente nivel. Hagamos que tu proyecto
+                    cobre vida y triunfe en el mundo digital. Tu visión es mi desafío, y estoy listo para superarlo.</p>
+                <p>Contáctame hoy mismo y descubre cómo puedo convertir tus sueños digitales en una realidad
+                    impresionante. El futuro digital está esperando por nosotros."</p>
             </article>
 
         </section>
@@ -143,7 +144,7 @@
                     </div>
 
                 </div>
-                <button href="" class="buttonCard">Lo quiero!</button>
+                <button class="buttonCard">Lo quiero!</button>
             </div>
             <div class="card">
                 <div class="tituloCard premium">
@@ -164,7 +165,7 @@
 
                     </ul>
                     <div class="precio">
-                        <p>700<span class="precioTarifa">€ IVA incl.</span< /p>
+                        <p>700<span class="precioTarifa">€ IVA incl.</span></p>
                     </div>
                 </div>
                 <button href="" class="buttonCard">Lo quiero!</button>
@@ -205,7 +206,7 @@
                     soluciones web eficaces.</p>
             </article>
         </section>
-        <section class="tecnologiaEiconos">
+        <div class="tecnologiaEiconos">
             <div class="tecnologia">
                 <div class="tecnologias html"></div>
                 <div class="tecnologias css"></div>
@@ -221,7 +222,7 @@
             </div>
             <button id="botonPresupuesto" href="" class="buttonCard">Solicitar Presupuesto</button>
 
-        </section>
+        </div>
 
         <div class="tituloSeccion">
             <h2>Portafolio</h2>
@@ -290,7 +291,7 @@
             </div>
         </section>
         <section class="footerSection copyright">
-            <h4>@2023 Copyright --WebbDeveloper.es Todos los derechos reservados.</h4>
+            <h4>@2023 Copyright --@creadorWeb.es Todos los derechos reservados.</h4>
         </section>
     </footer>
     <a class="botonWhatssap" href="https://wa.me/34686578482" target="_blank"><svg version="1.1" id="Capa_1"
@@ -326,24 +327,23 @@
         </section>
 
         <section class="presupuesto2">
-            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="web estatica">Web Estática</input>
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="web estatica">Web Estática
             <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="ecommerce">Comercio
-            electrónico</input>
+            electrónico
             <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="aplicacion">Aplicación
-            empresarial</input>
+            empresarial
             <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="reservas">Plataforma de
-            reservas</input>
-            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog</input>
+            reservas
+            <input type="radio" name="tipoDesarrollo" class="tipoDesarrollo" value="blog">Blog
         </section>
         <h4 class="titulo2">Tipo de desarrollo -- Plazos de entrega</h4>
         <section class="presupuesto8">
             <textarea name="descripcion" id="descripcion" rows="5" placeholder="Descripcion del proyecto"></textarea>
         </section>
 
-        </section>
         <h4 class="titulo3">Diseño y estilo, referencias -- Funcionalidades requeridas </h4>
         <section class="presupuesto3">
-            <textarea name="diseño" id="" rows="5" class="diseño"
+            <textarea name="diseño" rows="5" class="diseño"
                 placeholder="Si tienes algun referente sobre el estilo añade aqui la dirección web, añade paleta de colores si quieres alguna en particular, tipo de fuente, etc..."></textarea>
         </section>
         <section class="presupuesto4">
@@ -360,7 +360,7 @@
                 placeholder=" ¿Tiene competidores en línea? Conocer a la competencia puede proporcionar ideas y enfoques para destacar."></textarea>
         </section>
         <section class="presupuesto7">
-            <textarea name="fechaEntrega" id="" rows="5" placeholder="Fecha aproximada que se necesita la entrega"
+            <textarea name="fechaEntrega" rows="5" placeholder="Fecha aproximada que se necesita la entrega"
                 class="fechaEntrega"></textarea>
         </section>
         <section class="botones">
@@ -371,9 +371,12 @@
     </form>
     <section id="aviso">
 
-        <img class="advertencia" src="../imagenes/iconos/advertencia.png" alt="" srcset="">
-        <div class="cerrar"><button id="cerrarVentana"><img class="cerrarVentana"
-                    src="../imagenes/iconos/icono-cerrar.png" /></button></div>
+        <img class="advertencia" src="../imagenes/iconos/advertencia.png" alt="icono de advertencia">
+        <div class="cerrar">
+            <button id="cerrarVentana">
+                <img class="cerrarVentana" src="../imagenes/iconos/icono-cerrar.png" alt="cerrar ventana" />
+            </button>
+        </div>
         <p class="textoAviso">Seleccione un tipo de desarrollo, gracias.</p>
 
     </section>
