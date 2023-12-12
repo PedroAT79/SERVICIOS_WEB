@@ -20,7 +20,7 @@ body {
 .encabezado {
     max-width: 100%;
     /*border:1px solid black;*/
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -592,6 +592,63 @@ h3>a {
 
 
 }
+.presupuestoServicios1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;   
+    width: 45%;
+    margin: 5vh auto;
+    background-color: black;
+    padding: 7px;
+    flex-wrap: wrap;
+    color:#fff;
+    border-radius: 5px;
+
+}
+.presupuestoServicios1>section{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 5px auto;
+}
+.presupuestoServicios1>section textarea {
+    border: none;
+    width: 80%;
+    padding: 10px;
+}
+.presupuestoServicios1>section input {
+    margin: 5px;
+    padding: 5px 7px;
+    border: none;
+}
+
+.presupuestoServicios1>.botones>button {
+    margin: 5px;
+    cursor: pointer;
+}
+.presupuestoHead>button{
+    background-color: black;
+    border:none;
+}
+.presupuestoServicios1>.presupuestoHead>button>img{
+    width: 18px;
+    height: 18px;
+    
+    
+   
+}
+
+
+.presupuestoServicios1>.botones>button:hover {
+    border:.5px solid red;
+    background-color: #df2d2d2d;
+}
+.presupuestoServicios1>.presupuestoHead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
 
 .presupuestoServicios>button {
     grid-column: 6/6;
@@ -627,6 +684,7 @@ h3>a {
     grid-row: 2;
     border-bottom: 2px solid rgba(54, 73, 78, 1);
     margin-bottom: 10px;
+    padding: 5px;
 
 }
 
@@ -976,7 +1034,7 @@ footer {
 }
 
 .cuerpo {
-    height: 150vh;
+    height: 80vh;
     display: grid;
     grid-template-areas:
         "navCuerpo divCuerpo";
@@ -992,8 +1050,13 @@ footer {
 }
 
 .divCuerpo {
-    background-color: #f2f2f2;
-    width: 80vw;
+    overflow-y: scroll;
+}
+
+.titulos{
+    position: sticky;
+    top:0;
+    z-index:100;
 }
 
 .navCuerpo li {
@@ -1007,6 +1070,13 @@ footer {
     text-align: end;
 
 }
+
+thead {
+    position:sticky;
+    top:0px;
+}
+
+
 
 
 .navCuerpo li:hover {
@@ -1081,10 +1151,12 @@ footer {
 
 .datos, .listadoOferta {
     width: 88vw;
-    height: 65vh;
+    max-height: 65vh;
     /*border: 3px solid blue;*/
 
 }
+
+
 
 .datos h4 {
     width: 100%;
@@ -1096,15 +1168,18 @@ footer {
 
 .tabla {
     width: 70%;
+    max-height: 60vh;
     border: 1px solid black;
     margin: 35px auto;
     border-collapse: collapse;
+    overflow: hidden;
+    
 
 }
 
 th {
     width: 120px;
-    background-color: rgba(54, 73, 78, 0.9);
+    background-color: rgba(54, 73, 78, 1);
     padding: 5px 3px;
     border: 1px solid black;
     color: #fff;
@@ -1129,13 +1204,13 @@ td {
 }
 
 .btnEditar,
-.btnImprimir {
-    width: 5em;
-    background-color: rgba(72, 169, 166, 1);
+.btnImprimir, .btnPresupuesto {
+    width: 6.5em;
     margin: 7px;
     padding: 5px 7px;
     border: none;
     color: #fff;
+    background-color:rgba(72, 169, 166, 1) ;
 }
 
 
@@ -1143,9 +1218,9 @@ td {
 .btnBorrar,
 .btnOferta,
 .btnVer,
-.btnGuardar {
-    width: 5em;
-    background-color: rgba(219, 22, 47, 1);
+.btnGuardar{
+    width: 6.5em;
+    background-color: rgba(222, 23, 50, 0.781);
     margin: 7px;
     padding: 5px 7px;
     border: none;
@@ -1172,13 +1247,14 @@ td {
 .btnGuardar:hover,
 .btnOferta:hover,
 .btnImprimir:hover {
-    background-color: black;
+    background-color: rgba(54, 73, 78, 1);
 }
 
 
 .celdaBtn {
     display: flex;
-    border: none;
+    border-bottom: .10px solid rgba(54, 73, 78, 0.5);
+
 
 }
 
@@ -1273,7 +1349,52 @@ td {
     width: 95%;
   }
 
+.ofertaSeleccionada {
+    /*border:1px solid black;*/
+    width: 35%;
+    margin: 15px auto;
+    padding: 10px 7px;
+    display: flex;
+    flex-direction: column;
+    /*border-radius: 15px;*/
+    overflow-y: scroll;
+    background-color: rgba(54, 73, 78, 0.467);
+}
 
+.ofertaSeleccionada h3{
+    margin: 6px auto;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-decoration: underline;
+
+}
+.ofertaSeleccionada label {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    /*align-items: flex-start;*/
+    /*margin: 5px auto;*/
+    color:#fff;
+    margin: 15px;
+
+}
+.ofertaSeleccionada input, .ofertaSeleccionada textarea {
+    margin-left: 15px;
+    border:none;
+    color:blue;
+    padding: 4px;
+    width: 60%;
+    text-align: end;
+}
+
+.ofertaSeleccionada textarea {
+    width: 60%;
+    overflow-y: scroll;
+    text-align: justify;
+    
+}
 
 
 /*---RESPONSIVE--*/
