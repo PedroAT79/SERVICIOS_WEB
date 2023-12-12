@@ -35,8 +35,8 @@ const listarUnaOferta = async (req, res) => {
         const error = await new Error('No existe esa oferta');
         return res.status(400).json({ error: error.message });
     }
-
-    return res.json({ mag: oferta });
+    console.log(oferta);
+    return res.json({ oferta });
 
 }
 
@@ -73,7 +73,7 @@ const eliminarOferta = async (req, res) => {
         if (!ofertaAeliminar) {
             return res.status(404).json({ msg: 'La oferta a eliminar no existe' });
         }
-        res.json({ msg: 'Oferta eliminada correctamente', ofertaAeliminar });
+        res.json({ msg: ofertaAeliminar });
 
     } catch (error) {
         res.status(500).json({ mensaje: 'Error al eliminar la oferta', error: error.message });
