@@ -55,6 +55,10 @@ const UsuarioSchema = mongoose.Schema(
             default: generarId(),
             required: true
         },
+        confirmado: {
+            type: Boolean,
+            default: false
+        }
 
 
     },
@@ -78,7 +82,7 @@ UsuarioSchema.pre('save', async function (next) {
 
 
 
-//Autencacion del usuario:
+//Autenticacion del usuario:
 UsuarioSchema.methods.comprobarPassword = async function (passwordFormulario) {
     return await bcrypt.compare(passwordFormulario, this.passwordReg);
 }
