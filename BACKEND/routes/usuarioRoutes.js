@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import {editarUnUsuario, eliminarUnUsuario, registrarUsuario, verTodosLosUsuarios, verUnUsuario} from '../controllers/usuarioController.js'
+import {autenticarUsuario, confirmarUsuario, editarUnUsuario, eliminarUnUsuario, perfilUsuario, registrarUsuario, verTodosLosUsuarios, verUnUsuario} from '../controllers/usuarioController.js'
 
 router.route('/')
 .post(registrarUsuario)
@@ -11,6 +11,9 @@ router.route('/:id')
 .put(editarUnUsuario)
 .delete(eliminarUnUsuario);
 
+router.get('/confirmarUsuario/:tokenReg', confirmarUsuario);
+router.post('/autenticarUsuario', autenticarUsuario);
+router.get('/perfil', perfilUsuario);
 
 export default router;
 
